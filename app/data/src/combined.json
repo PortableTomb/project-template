@@ -1,0 +1,16 @@
+{
+	"head": {
+		"title": "jade getz portfolio"
+	},
+	"main": {
+		"title": "Oh. My. GOD. I'm like, totally awesome!"
+	},
+	"nav": {
+		"links": [
+			"Home",
+			"Portfolio",
+			"Gallery",
+			"About"
+		]
+	}
+}

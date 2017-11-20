@@ -1,0 +1,10 @@
+{
+  "nav":{
+    "links": [
+    "Home",
+    "Portfolio",
+    "Gallery",
+    "About"
+    ]
+  }
+}
