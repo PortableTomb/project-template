@@ -1,1 +1,1 @@
-alert('Logging from Test2');
+console.log('Logging from Test2');
