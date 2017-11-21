@@ -3,7 +3,8 @@ const gulp = require('gulp'),
       data = require('gulp-data'),
       merge = require('gulp-merge-json'),
       fs = require('fs'),
-      path = require('path')
+      path = require('path'),
+      imagemin = require('gulp-imagemin'),
       autoprefixer = require('autoprefixer')
       concat = require('gulp-concat'),
       uglify = require('gulp-uglify'),
@@ -17,9 +18,12 @@ const gulp = require('gulp'),
       babelify = require('babelify'),
       babel = require('babel-core')
       sourcemaps = require('gulp-sourcemaps')
-      gutil = require('gulp-util');
+      gutil = require('gulp-util'),
+      plumber = require('gulp-plumber'),
+      beeper = require('beeper'),
+      del = require('del');
 
-// HTML
+// PUG
 // pug:data
  const options = {
    data: 'data.json'
@@ -43,13 +47,26 @@ const gulp = require('gulp'),
    .pipe(gulp.dest('./dist'));
  });
 
- // CSS
- // postcss styles
+ // POSTCSS
+ // styles
+ // error handling
+ function onError(error) {
+   beeper();
+   console.log('Name:', error.name);
+   console.log('Reason:', error.reason);
+   console.log('File:', error.file);
+   console.log('Line:', error.line);
+   console.log('Column:', error.column);
+ }
+
  gulp.task('styles', function() {
   return gulp.src('./src/styles/postcss/*.css')
+    .pipe(plumber({
+      errorHandler: onError
+    }))
     .pipe(concat('style.css'))
     .pipe(postcss([
-      cssnext(),
+      cssnext({ browsers: ['last 2 versions'] }),
       cssnano({ autoprefixer: false })
     ]))
     .pipe(gulp.dest('./dist/css'))
@@ -65,8 +82,8 @@ gulp.task('browsersync', function() {
   });
 });
 
-// JS
-// js scripts
+// JAVASCRIPTS
+// scripts
 gulp.task('scripts', function(){
   return gulp.src('./src/scripts/*.js')
     .pipe(concat('app.js'))
@@ -94,6 +111,13 @@ gulp.task('browserify', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
+//images
+gulp.task('images', function() {
+  return gulp.src('img/*')
+  .pipe(imagemin())
+  .pipe(gulp.dest('dist/img'))
+})
+
 
 // watch
  gulp.task('watch', function() {
@@ -102,5 +126,10 @@ gulp.task('browserify', function() {
    gulp.watch('./src/scripts/*.js', gulp.series('scripts'));
  });
 
+//clean
+gulp.task('clean', function(){
+  return del(['./dist/css/style.css', './dist/css/bundle.js'])
+})
+
  // default
-gulp.task('build', gulp.parallel('watch', 'pug:data', 'pug:html', 'styles', 'scripts', 'browserify', 'browsersync'));
+gulp.task('build', gulp.parallel('clean', 'pug:data', 'pug:html', 'images', 'styles', 'scripts', 'watch', 'browserify', 'browsersync'));
