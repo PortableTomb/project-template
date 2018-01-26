@@ -11,6 +11,7 @@ const gulp = require('gulp'),
       postcss = require('gulp-postcss'),
       cssnext = require('postcss-cssnext'),
       cssnano = require('cssnano'),
+      cssnesting = require('postcss-nesting'),
       browsersync = require('browser-sync').create(),
       browserify = require('browserify'),
       source = require('vinyl-source-stream'),
@@ -57,11 +58,6 @@ const gulp = require('gulp'),
  // error handling
  function onError(error) {
    beeper();
-   console.log('Name:', error.name);
-   console.log('Reason:', error.reason);
-   console.log('File:', error.file);
-   console.log('Line:', error.line);
-   console.log('Column:', error.column);
  }
 
  gulp.task('styles', function() {
@@ -71,6 +67,7 @@ const gulp = require('gulp'),
     }))
     .pipe(concat('style.css'))
     .pipe(postcss([
+      cssnesting({}),
       cssnext({ browsers: ['last 2 versions'] }),
       cssnano({ autoprefixer: false })
     ]))

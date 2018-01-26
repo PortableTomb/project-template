@@ -13,3 +13,10 @@
 .main__title {
   background-color: green;
 }
+.main__text {
+  font-size: 40px;
+  & a{
+    color: white;
+    background-color: blue;
+  }
+}
