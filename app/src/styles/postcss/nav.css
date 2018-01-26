@@ -5,3 +5,11 @@
   height: auto;
   background: pink;
 }
+
+.main__text{
+  background-color: red;
+}
+
+.main__title {
+  background-color: green;
+}

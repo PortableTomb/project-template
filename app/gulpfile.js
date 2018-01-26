@@ -91,14 +91,14 @@ gulp.task('browsersync', function() {
 // scripts
 gulp.task('scripts', function(){
   return gulp.src('./src/scripts/*.js')
-    .pipe(concat('app.js'))
-    .pipe(gulp.dest('./src/scripts/concat'));
+    .pipe(concat('bundle.js'))
+    .pipe(gulp.dest('./src/scripts/concat/'));
 });
 
 // browserify
 gulp.task('browserify', function() {
   var b = browserify({
-    entries: './src/scripts/concat/app.js',
+    entries: './src/scripts/concat/bundle.js',
     debug: true
   });
 
@@ -127,7 +127,7 @@ gulp.task('images', function() {
  gulp.task('watch', function() {
    gulp.watch('./src/views/**/*.pug', gulp.series(['pug:html'])).on('change', browsersync.reload);
    gulp.watch('./src/styles/postcss/*.css', gulp.series('styles')).on('change', browsersync.reload);
-   gulp.watch('./src/scripts/*.js', gulp.series('scripts'));
+   gulp.watch('./src/scripts/*.js', gulp.series('scripts')).on('change', browsersync.reload);
  });
 
 // clean
@@ -135,8 +135,14 @@ gulp.task('clean', function(){
   return del(['./data/src/combined.json', './dist/css/style.css', './dist/js/bundle.js'])
 })
 
+// async completion
+gulp.task('message', function(done) {
+  console.log("gulp be done");
+  done();
+});
+
 // build
-gulp.task('build', gulp.parallel('pug:html','images', 'styles', 'scripts', 'watch', 'browserify', 'browsersync'));
+gulp.task('build', gulp.parallel('pug:html','images', 'styles', 'scripts', 'watch', 'browsersync', 'browserify', 'message'));
 
 // default
 gulp.task('default', gulp.series(['clean','pug:data','build']));

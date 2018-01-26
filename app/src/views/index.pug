@@ -7,8 +7,8 @@ html(lang="en")
         ul.nav
             each link in nav.links
                 li=link       
-        div=main.title
-          div=main.text
+        div(class='main__title')=main.title
+          div(class='main__text')=main.text
             div
               a(href='https://www.google.com' target='_blank') Google
 
