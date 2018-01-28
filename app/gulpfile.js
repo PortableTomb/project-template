@@ -5,7 +5,7 @@ const gulp = require('gulp'),
       fs = require('fs'),
       path = require('path'),
       imagemin = require('gulp-imagemin'),
-      autoprefixer = require('autoprefixer')
+      // autoprefixer = require('autoprefixer')
       concat = require('gulp-concat'),
       uglify = require('gulp-uglify'),
       postcss = require('gulp-postcss'),
@@ -22,7 +22,9 @@ const gulp = require('gulp'),
       gutil = require('gulp-util'),
       plumber = require('gulp-plumber'),
       beeper = require('beeper'),
-      del = require('del');
+      del = require('del'),
+      sass = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer');
 
 // PUG
 // pug:data
@@ -75,6 +77,15 @@ const gulp = require('gulp'),
     .pipe( browsersync.stream() );
 });
 
+// sass
+gulp.task('sass', function () {
+ return gulp.src('./src/styles/sass/**/*.scss')
+  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  .pipe(autoprefixer())
+  .pipe(gulp.dest('./dist/css'))
+  .pipe( browsersync.stream() );
+});
+
 // browsersync
 gulp.task('browsersync', function() {
   browsersync.init(null, {
@@ -115,21 +126,29 @@ gulp.task('browserify', function() {
 
 //images
 gulp.task('images', function() {
-  return gulp.src('img/*')
-  .pipe(imagemin())
+  return gulp.src(['./src/assets/img/*','./src/assets/svg/*'])
+  .pipe(imagemin([
+    imagemin.svgo({
+		plugins: [
+			{removeViewBox: true},
+			{cleanupIDs: false}
+		]
+	})
+  ]))
   .pipe(gulp.dest('dist/img'))
 })
 
 // watch
  gulp.task('watch', function() {
    gulp.watch('./src/views/**/*.pug', gulp.series(['pug:html'])).on('change', browsersync.reload);
-   gulp.watch('./src/styles/postcss/*.css', gulp.series('styles')).on('change', browsersync.reload);
+   // gulp.watch('./src/styles/postcss/*.css', gulp.series('styles')).on('change', browsersync.reload);
+   gulp.watch('./src/styles/sass/**/*.scss', gulp.series('sass')).on('change', browsersync.reload);
    gulp.watch('./src/scripts/*.js', gulp.series('scripts')).on('change', browsersync.reload);
  });
 
 // clean
 gulp.task('clean', function(){
-  return del(['./data/src/combined.json', './dist/css/style.css', './dist/js/bundle.js'])
+  return del(['./data/src/combined.json', './dist/img/svg/sprite.svg', './dist/css/styles.css', './dist/js/bundle.js'])
 })
 
 // async completion
@@ -139,7 +158,7 @@ gulp.task('message', function(done) {
 });
 
 // build
-gulp.task('build', gulp.parallel('pug:html','images', 'styles', 'scripts', 'watch', 'browsersync', 'browserify', 'message'));
+gulp.task('build', gulp.parallel('pug:html','images', 'sass', 'scripts', 'watch', 'browsersync', 'browserify', 'message'));
 
 // default
 gulp.task('default', gulp.series(['clean','pug:data','build']));

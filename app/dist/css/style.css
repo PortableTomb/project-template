@@ -1,1 +1,13 @@
-.nav{display:inline-block;list-style:none;width:200px;height:auto;background:pink}.main__text{background-color:red}.main__title{background-color:green}.main__text{font-size:40px}.main__text a{color:#fff;background-color:blue}
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  background-color: grey; }

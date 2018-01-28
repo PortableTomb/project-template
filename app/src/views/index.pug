@@ -1,15 +1,33 @@
 doctype html
 html(lang="en")
     head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title=head.title
-        link(href='css/style.css' rel="stylesheet")
+        link(href='css/styles.css' rel="stylesheet")
     body
-        ul.nav
-            each link in nav.links
-                li=link       
-        div(class='main__title')=main.title
-          div(class='main__text')=main.text
-            a(href='https://www.google.com' target='_blank') Google
+        div(class="container")
+          header(class="header")
+            img(class="brand-logo" src="img/skeleton-key.png" alt="key logo")
+            form(class="search" action="#")
+              input(class="search__input" type="text" placeholder="search")
+              button(class="search__button")
+                svg(class="search__icon")
+                  use(xlink:href="img/sprite.svg#icon-magnifying-glass")
+            
+            nav(class="user-nav")
+              div(class="user-nav__icon-box")
+                svg(class="user-nav__icon")
+                  use(xlink:href="img/sprite.svg#icon-bell")
+                span(class="user-nav__notification")
+              div(class="user-nav__icon-box")
+                svg(class="user-nav__icon")
+                  use(xlink:href="img/sprite.svg#icon-bubble")
+                span(class="user-nav__notification")
+              div(class="user-nav__user")
+                img(class="user-nav__user--photo" src="img/user-avatar.jpg")
+  
+
 
        
         
