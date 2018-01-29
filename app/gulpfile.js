@@ -34,7 +34,7 @@ const gulp = require('gulp'),
  gulp.task('pug:data', function() {
    return  gulp.src('data/**/*.json')
    .pipe(merge())
-   .pipe(gulp.dest('./data/src'))
+   .pipe(gulp.dest('./dist/data/src'))
    .pipe( browsersync.stream() );
  });
 
@@ -44,7 +44,7 @@ const gulp = require('gulp'),
    .pipe(data(function(file) {
          // return require('./data/src/combined.json');
          return JSON.parse(
-            fs.readFileSync('./data/src/combined.json')
+            fs.readFileSync('./dist/data/src/combined.json')
           );
        }))
    .pipe(pug({
@@ -126,7 +126,7 @@ gulp.task('browserify', function() {
 
 //images
 gulp.task('images', function() {
-  return gulp.src(['./src/assets/img/*','./src/assets/svg/*'])
+  return gulp.src(['./src/assets/img/**/*','./src/assets/svg/*'])
   .pipe(imagemin([
     imagemin.svgo({
 		plugins: [

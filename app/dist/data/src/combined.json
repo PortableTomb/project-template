@@ -1,0 +1,108 @@
+{
+	"paragraph": [
+		{
+			"head": "Ut corporis incidunt deserunt",
+			"blurb": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate."
+		},
+		{
+			"head": "Animi nisi dignissimos debitis ratione",
+			"blurb": "Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam."
+		}
+	],
+	"list": [
+		{
+			"item": "cleaning service",
+			"icon": "img/sprite.svg#icon-home2"
+		},
+		{
+			"item": "concierge service",
+			"icon": "img/sprite.svg#icon-bell"
+		},
+		{
+			"item": "24hr meal service",
+			"icon": "img/sprite.svg#icon-spoon-knife"
+		},
+		{
+			"item": "free coffee & tea",
+			"icon": "img/sprite.svg#icon-mug"
+		},
+		{
+			"item": "stocked minibar",
+			"icon": "img/sprite.svg#icon-glass"
+		},
+		{
+			"item": "local tours",
+			"icon": "img/sprite.svg#icon-book"
+		}
+	],
+	"gallery": {
+		"images": [
+			"img/Bed_600.jpg",
+			"img/Chairs_600.jpg",
+			"img/Live_600.jpg"
+		]
+	},
+	"head": {
+		"title": "project template"
+	},
+	"nav": [
+		{
+			"title": "the sanctuary",
+			"icon": "img/sprite.svg#icon-key"
+		},
+		{
+			"title": "accommodations",
+			"icon": "img/sprite.svg#icon-glass"
+		},
+		{
+			"title": "reservations",
+			"icon": "img/sprite.svg#icon-book"
+		}
+	],
+	"overview": {
+		"heading": "Traveller's Sanctuary",
+		"location": "San Francisco, California USA",
+		"icon": "img/sprite.svg#icon-location2",
+		"fullstar": "img/sprite.svg#icon-star-full",
+		"halfstar": "img/sprite.svg#icon-star-half",
+		"average": "8.5 rating",
+		"count": "420 Votes"
+	},
+	"recommend": {
+		"users": [
+			"img/user-photo-01.jpg",
+			"img/user-photo-02.jpg",
+			"img/user-photo-03.jpg",
+			"img/user-photo-04.jpg",
+			"img/user-photo-05.jpg",
+			"img/user-photo-06.jpg"
+		],
+		"count": "Raul and 5 others recommend the Sanctuary."
+	},
+	"reviews": [
+		{
+			"quote": "The Sanctuary staff saw to our every need while we were in town. The whole team had an amazing stay. Could not recommend it more.",
+			"image": "img/user-photo-03.jpg",
+			"name": "Jordan Rivers",
+			"date": "January 4th, 2018",
+			"icon": "img/sprite.svg#icon-heart",
+			"count": "123 likes"
+		},
+		{
+			"quote": "I always try to stay at the Sanctuary when I'm in town on business. Incrediblely dedicated staff and service. Highly recommended",
+			"image": "img/user-photo-02.jpg",
+			"name": "Sara Ali",
+			"date": "October 23rd, 2017",
+			"icon": "img/sprite.svg#icon-heart",
+			"count": "74 likes"
+		},
+		{
+			"quote": "Best place to stay if you are travelling to San Francisco. Make sure to book well in advance.",
+			"image": "img/user-photo-04.jpg",
+			"name": "Amy Zhu",
+			"date": "October 23rd, 2017",
+			"icon": "img/sprite.svg#icon-heart",
+			"count": "109 likes"
+		}
+	]
+}

@@ -2,8 +2,9 @@
 .header {
   height: 7rem;
   font-size: 1.5rem;
-  background-color: #efefef;
+  // background-color: #efefef;
   border-bottom: 1px solid #ddd;
+  background-image: url('./src/assets/img/Outer_600.jpg');
 
   display: flex;
   justify-content: space-between;
@@ -44,7 +45,7 @@
     padding: .75rem 2rem;
     transition: all .25s ease-in-out;
     margin-right: -3.25rem;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
 
     // @media only screen and (max-width: $bp-smallest) {
     //     width: 85%;
@@ -130,7 +131,7 @@
         height: 1.75rem;
         width: 1.75rem;
         border-radius: 100px;
-        background-color: blue;
+        background-color: pink;
         color: #fff;
         position: absolute;
         top: 1.5rem;

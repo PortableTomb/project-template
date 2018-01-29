@@ -28,3 +28,7 @@ svg, svg::before, svg::after {
   width: 32px;
   height: 32px;
 }
+
+img, img::before, img::after {
+  max-width: 100%;
+}

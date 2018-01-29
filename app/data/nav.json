@@ -1,10 +1,12 @@
 {
-  "nav":{
-    "links": [
-    "One",
-    "Two",
-    "Three",
-    "Four"
-    ]
-  }
+  "nav": [{
+    "title": "the sanctuary",
+    "icon": "img/sprite.svg#icon-key"
+  }, {
+    "title": "accommodations",
+    "icon": "img/sprite.svg#icon-glass"
+  }, {
+    "title": "reservations",
+    "icon": "img/sprite.svg#icon-book"
+  }]
 }

@@ -5,6 +5,7 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title=head.title
         link(href='css/styles.css' rel="stylesheet")
+
     body
         div(class="container")
           header(class="header")
@@ -15,7 +16,7 @@ html(lang="en")
                 svg(class="search__icon")
                   use(xlink:href="img/sprite.svg#icon-magnifying-glass")
             
-            nav(class="user-nav")
+            div(class="user-nav")
               div(class="user-nav__icon-box")
                 svg(class="user-nav__icon")
                   use(xlink:href="img/sprite.svg#icon-bell")
@@ -26,10 +27,79 @@ html(lang="en")
                 span(class="user-nav__notification")
               div(class="user-nav__user")
                 img(class="user-nav__user--photo" src="img/user-avatar.jpg")
-  
-
-
-       
+                  
+          div(class="content")
+            nav(class="navbar")
+              ul(class="top-nav") 
+                              
+                each i in nav
+                    li(class="top-nav__item")
+                      a(class="top-nav__link")
+                        svg(class="top-nav__icon")
+                          use(xlink:href=i.icon)
+                        span=i.title
+                
+            main(class="content-view")
+              div(class="gallery")
+                each image in gallery.images
+                    figure(class="gallery__item")
+                        img(src=image alt="gallery photo")
+                          
+              div(class="overview")
+                h1(class="overview__heading")=overview.heading
+                
+                div(class="overview__location")
+                  a(class="btn-inline")=overview.location
+                  svg(class="overview__icon-location")
+                    use(xlink:href=overview.icon)
+                
+              - var n = 0;
+                div(class="overview__stars")
+                  while n < 4
+                    svg(class="overview__icon-star")
+                      use(xlink:href=overview.fullstar)= n++
+                  svg(class="overview__icon-star")
+                    use(xlink:href=overview.halfstar)
+                    
+                //- div(class="overview__rating")
+                //-   div(class="overview__rating-average")=overview.average
+                //-   span(class="overview__rating-count")=overview.count
+                          
+                div(class="detail")
+                  div(class="description")
+                    each p in paragraph
+                      h3(class="parahead")=p.head
+                      p(class="paragraph")=p.blurb
+                    
+                    each i in list
+                      ul(class="list")
+                        svg
+                          use(xlink:href=i.icon)
+                        li(class="list__item")=i.item
+              
+                    div(class="recommend")
+                      each user in recommend.users
+                        div(class="recommend__users")
+                          img(class="recommend__photo" alt="user avatar" src=user)
+                    div(class="recommend__box")
+                        p(class="recommend__counter")=recommend.count
+                        
+                  div(class="user-reviews")
+                    
+                    figure(class="review")
+                      h3(class="user-reviews-title")
+                      
+                      each review in reviews
+                        blockquote(class="review__text")=review.quote
+                        figcaption(class="review__user")
+                          img(class="img review__photo" alt="user photo" src=review.image)
+                          div(class="review__user-box")
+                            p(class="review__user-name")=review.name
+                            p(class="review__user-date")=review.date
+                          div(class="review__user-btn")
+                            svg(class="review__user-like")
+                              use(xlink:href=review.icon)
+                            span(class="review__user-date")=review.count
         
 
         script(src='js/bundle.js' type="text/javascript")

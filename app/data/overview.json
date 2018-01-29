@@ -1,0 +1,11 @@
+{
+  "overview":{
+    "heading": "Traveller's Sanctuary",
+    "location": "San Francisco, California USA",
+    "icon": "img/sprite.svg#icon-location2",
+    "fullstar": "img/sprite.svg#icon-star-full",
+    "halfstar": "img/sprite.svg#icon-star-half",
+    "average": "8.5 rating",
+    "count": "420 Votes"
+  }
+}

@@ -1,0 +1,29 @@
+.top-nav {
+  padding: 1rem 0;
+  display: flex;
+  font-size: 1.4rem;
+  list-style: none;
+  // margin-top: 3.5rem;
+
+  &__item {
+    flex: 1;
+    position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: #333;
+  }
+}

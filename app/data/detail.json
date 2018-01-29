@@ -1,0 +1,28 @@
+{
+  "paragraph":[{
+    "head": "Ut corporis incidunt deserunt",
+    "blurb": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate."
+  }, {
+    "head": "Animi nisi dignissimos debitis ratione",
+    "blurb": "Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam."
+  }],
+  "list": [{
+    "item": "cleaning service",
+    "icon": "img/sprite.svg#icon-home2"
+  }, {
+    "item": "concierge service",
+    "icon": "img/sprite.svg#icon-bell"
+  }, {
+    "item": "24hr meal service",
+    "icon": "img/sprite.svg#icon-spoon-knife"
+  }, {
+    "item": "free coffee & tea",
+    "icon": "img/sprite.svg#icon-mug"
+  }, {
+    "item": "stocked minibar",
+    "icon": "img/sprite.svg#icon-glass"
+  }, {
+    "item": "local tours",
+    "icon": "img/sprite.svg#icon-book"
+  }]
+}
