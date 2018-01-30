@@ -1,4 +1,5 @@
 {
+  "heading": "what guests are saying... ",
   "reviews":[{
     "quote": "The Sanctuary staff saw to our every need while we were in town. The whole team had an amazing stay. Could not recommend it more.",
     "image": "img/user-photo-03.jpg",
@@ -13,8 +14,7 @@
     "date": "October 23rd, 2017",
     "icon": "img/sprite.svg#icon-heart",
     "count": "74 likes"
-  },
-  {
+  }, {
     "quote": "Best place to stay if you are travelling to San Francisco. Make sure to book well in advance.",
     "image": "img/user-photo-04.jpg",
     "name": "Amy Zhu",

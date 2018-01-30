@@ -1,11 +1,11 @@
 {
 	"paragraph": [
 		{
-			"head": "Ut corporis incidunt deserunt",
+			"head": "About Traveller's Sanctuary",
 			"blurb": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate."
 		},
 		{
-			"head": "Animi nisi dignissimos debitis ratione",
+			"head": "Ammenities",
 			"blurb": "Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam."
 		}
 	],
@@ -15,7 +15,7 @@
 			"icon": "img/sprite.svg#icon-home2"
 		},
 		{
-			"item": "concierge service",
+			"item": "24hr concierge",
 			"icon": "img/sprite.svg#icon-bell"
 		},
 		{
@@ -23,16 +23,16 @@
 			"icon": "img/sprite.svg#icon-spoon-knife"
 		},
 		{
+			"item": "gym membership",
+			"icon": "img/sprite.svg#icon-bookmark"
+		},
+		{
 			"item": "free coffee & tea",
 			"icon": "img/sprite.svg#icon-mug"
 		},
 		{
-			"item": "stocked minibar",
-			"icon": "img/sprite.svg#icon-glass"
-		},
-		{
-			"item": "local tours",
-			"icon": "img/sprite.svg#icon-book"
+			"item": "free breakfast",
+			"icon": "img/sprite.svg#icon-spoon-knife"
 		}
 	],
 	"gallery": {
@@ -47,7 +47,7 @@
 	},
 	"nav": [
 		{
-			"title": "the sanctuary",
+			"title": "about us",
 			"icon": "img/sprite.svg#icon-key"
 		},
 		{
@@ -79,6 +79,7 @@
 		],
 		"count": "Raul and 5 others recommend the Sanctuary."
 	},
+	"heading": "what guests are saying... ",
 	"reviews": [
 		{
 			"quote": "The Sanctuary staff saw to our every need while we were in town. The whole team had an amazing stay. Could not recommend it more.",

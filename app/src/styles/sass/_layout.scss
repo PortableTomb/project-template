@@ -3,6 +3,12 @@
   min-height: 50rem;
   margin: 8rem auto;
   background-color: #fff;
+
+  @media only screen and (max-width: $bp-largest) {
+      margin: 0;
+      max-width: 100%;
+      width: 100%;
+  }
 }
 
 .content {
@@ -21,6 +27,7 @@
 
 .content-view {
   flex: 1;
+  @include shadow();
   // height: 80rem;
 }
 
@@ -30,6 +37,14 @@
   font-size: 1.4rem;
   background-color: #eee;
   border-bottom: pink;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -37,8 +52,18 @@
     flex: 0 0 60%;
     padding: 3rem;
     background-color: #fff;
-    // box-shadow: var(--shadow-light);
+    @include shadow();
     margin-right: 4.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-right: 3rem;
+        padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .user-reviews {

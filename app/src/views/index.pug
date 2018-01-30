@@ -71,11 +71,12 @@ html(lang="en")
                       h3(class="parahead")=p.head
                       p(class="paragraph")=p.blurb
                     
-                    each i in list
-                      ul(class="list")
-                        svg
-                          use(xlink:href=i.icon)
+                   
+                    ul(class="list")
+                      each i in list
                         li(class="list__item")=i.item
+                          svg(class="list__icon")
+                            use(xlink:href=i.icon)
               
                     div(class="recommend")
                       each user in recommend.users
@@ -86,9 +87,9 @@ html(lang="en")
                         
                   div(class="user-reviews")
                     
+                    
                     figure(class="review")
-                      h3(class="user-reviews-title")
-                      
+                      h3(class="review__title")=reviews.heading
                       each review in reviews
                         blockquote(class="review__text")=review.quote
                         figcaption(class="review__user")
