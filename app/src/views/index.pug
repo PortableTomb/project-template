@@ -29,6 +29,7 @@ html(lang="en")
                 img(class="user-nav__user--photo" src="img/user-avatar.jpg")
                   
           div(class="content")
+            //- div(class="hero")
             nav(class="navbar")
               ul(class="top-nav") 
                               
@@ -40,10 +41,12 @@ html(lang="en")
                         span=i.title
                 
             main(class="content-view")
-              div(class="gallery")
-                each image in gallery.images
-                    figure(class="gallery__item")
-                        img(src=image alt="gallery photo")
+              div(class="hero")
+              
+              //- div(class="gallery")
+              //-   each image in gallery.images
+              //-       figure(class="gallery__item")
+              //-           img(src=image alt="gallery photo")
                           
               div(class="overview")
                 h1(class="overview__heading")=overview.heading
@@ -60,35 +63,68 @@ html(lang="en")
                       use(xlink:href=overview.fullstar)= n++
                   svg(class="overview__icon-star")
                     use(xlink:href=overview.halfstar)
+                      
+                      
+                div(class="gallery")
+                  each image in gallery.images
+                      figure(class="gallery__item")
+                          img(src=image alt="gallery photo")      
                     
                 //- div(class="overview__rating")
                 //-   div(class="overview__rating-average")=overview.average
                 //-   span(class="overview__rating-count")=overview.count
                           
                 div(class="detail")
+                  
                   div(class="description")
-                    each p in paragraph
+                    img(src="img/guests-01.jpg" class="detail_image")
+                    each p in paragraph1
                       h3(class="parahead")=p.head
-                      p(class="paragraph")=p.blurb
-                    
-                   
+                      p(class="paragraph")=p.blurb1
+                      p(class="paragraph")=p.blurb2
+                      
+                    each s in paragraph3
+                      h3(class="parahead")=s.head
+                      p(class="paragraph")=s.blurb 
+                              
                     ul(class="list")
-                      each i in list
+                      each n in features
+                        li(class="list__item")=n.item
+                          svg(class="list__icon")
+                            use(xlink:href=n.icon)
+                   
+                    each s in paragraph2
+                      h3(class="parahead")=s.head
+                      p(class="paragraph")=s.blurb      
+                              
+                    ul(class="list")
+                      each i in amenities
                         li(class="list__item")=i.item
                           svg(class="list__icon")
                             use(xlink:href=i.icon)
+                
+
               
-                    div(class="recommend")
-                      each user in recommend.users
-                        div(class="recommend__users")
-                          img(class="recommend__photo" alt="user avatar" src=user)
-                    div(class="recommend__box")
-                        p(class="recommend__counter")=recommend.count
+                    //- div(class="recommend")
+                    //-   each user in recommend.users
+                    //-     div(class="recommend__users")
+                    //-       img(class="recommend__photo" alt="user avatar" src=user)
+                    //- div(class="recommend__box")
+                    //-     p(class="recommend__counter")=recommend.count
                         
                   div(class="user-reviews")
-                    
-                    
                     figure(class="review")
+               
+                      div(class="recommend")
+                        each user in recommend.users
+                          div(class="recommend__users")
+                            img(class="recommend__photo" alt="user avatar" src=user)
+                      
+                      div(class="recommend__box")
+                          p(class="recommend__counter")=recommend.count
+                      
+                      
+                      
                       h3(class="review__title")=reviews.heading
                       each review in reviews
                         blockquote(class="review__text")=review.quote

@@ -1,0 +1,25 @@
+{
+  "paragraph3":[{
+    "head": "accomodations",
+    "blurb": "Tacos church-key intelligentsia bushwick blue bottle poke flexitarian. Vegan hella umami prism iceland jianbing. Yr vinyl before shabby chic schlitz brunch mlkshk cold-pressed plaid fashion axe adaptogen cray succulents 3 wolf moon cliche disrupt. Microdosing slow-carb tilde offal chillwave.."
+  }],
+  "features": [{
+  "item": "4 Bedrooms",
+  "icon": "img/sprite.svg#icon-diamonds"
+  }, {
+  "item": "2 Bathrooms",
+  "icon": "img/sprite.svg#icon-diamonds"
+  }, {
+  "item": "Full Kitchen",
+  "icon": "img/sprite.svg#icon-diamonds"
+  }, {
+  "item": "Home Office",
+  "icon": "img/sprite.svg#icon-diamonds"
+  }, {
+  "item": "Mini Theater",
+  "icon": "img/sprite.svg#icon-diamonds"
+  }, {
+  "item": "Private Deck",
+  "icon": "img/sprite.svg#icon-diamonds"
+  }]
+}

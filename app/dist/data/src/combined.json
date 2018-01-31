@@ -1,15 +1,11 @@
 {
-	"paragraph": [
+	"paragraph2": [
 		{
-			"head": "About Traveller's Sanctuary",
-			"blurb": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate."
-		},
-		{
-			"head": "Ammenities",
-			"blurb": "Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam."
+			"head": "amenities",
+			"blurb": "Gluten-free distillery messenger bag affogato bitters pop-up try-hard gentrify ethical, blog chicharrones lyft organic. Gochujang lyft pinterest tbh chia iPhone lumbersexual. Iceland leggings kinfolk."
 		}
 	],
-	"list": [
+	"amenities": [
 		{
 			"item": "cleaning service",
 			"icon": "img/sprite.svg#icon-home2"
@@ -24,15 +20,22 @@
 		},
 		{
 			"item": "gym membership",
-			"icon": "img/sprite.svg#icon-bookmark"
+			"icon": "img/sprite.svg#icon-trophy"
 		},
 		{
 			"item": "free coffee & tea",
 			"icon": "img/sprite.svg#icon-mug"
 		},
 		{
-			"item": "free breakfast",
-			"icon": "img/sprite.svg#icon-spoon-knife"
+			"item": "wi-fi & cable",
+			"icon": "img/sprite.svg#icon-connection"
+		}
+	],
+	"paragraph1": [
+		{
+			"head": "About Traveller's Sanctuary",
+			"blurb1": "Taxidermy DIY kogi vaporware, microdosing quinoa pabst seitan franzen chicharrones raw denim. Pinterest humblebrag small batch, you probably haven't heard of them disrupt bespoke green juice hashtag selfies shaman.",
+			"blurb2": "Beard truffaut 8-bit taiyaki pitchfork trust fund unicorn. Pabst artisan keffiyeh direct trade mumblecore. Palo santo vexillologist lyft heirloom kale chips."
 		}
 	],
 	"gallery": {
@@ -47,15 +50,15 @@
 	},
 	"nav": [
 		{
-			"title": "about us",
+			"title": "the staff",
 			"icon": "img/sprite.svg#icon-key"
 		},
 		{
-			"title": "accommodations",
+			"title": "the space",
 			"icon": "img/sprite.svg#icon-glass"
 		},
 		{
-			"title": "reservations",
+			"title": "book now",
 			"icon": "img/sprite.svg#icon-book"
 		}
 	],
@@ -77,7 +80,7 @@
 			"img/user-photo-05.jpg",
 			"img/user-photo-06.jpg"
 		],
-		"count": "Raul and 5 others recommend the Sanctuary."
+		"count": "Recommended by 99"
 	},
 	"heading": "what guests are saying... ",
 	"reviews": [
@@ -93,17 +96,49 @@
 			"quote": "I always try to stay at the Sanctuary when I'm in town on business. Incrediblely dedicated staff and service. Highly recommended",
 			"image": "img/user-photo-02.jpg",
 			"name": "Sara Ali",
-			"date": "October 23rd, 2017",
+			"date": "November 23rd, 2017",
 			"icon": "img/sprite.svg#icon-heart",
 			"count": "74 likes"
 		},
 		{
 			"quote": "Best place to stay if you are travelling to San Francisco. Make sure to book well in advance.",
 			"image": "img/user-photo-04.jpg",
-			"name": "Amy Zhu",
-			"date": "October 23rd, 2017",
+			"name": "Coraline Zhu",
+			"date": "September 9th, 2017",
 			"icon": "img/sprite.svg#icon-heart",
 			"count": "109 likes"
+		}
+	],
+	"paragraph3": [
+		{
+			"head": "accomodations",
+			"blurb": "Tacos church-key intelligentsia bushwick blue bottle poke flexitarian. Vegan hella umami prism iceland jianbing. Yr vinyl before shabby chic schlitz brunch mlkshk cold-pressed plaid fashion axe adaptogen cray succulents 3 wolf moon cliche disrupt. Microdosing slow-carb tilde offal chillwave.."
+		}
+	],
+	"features": [
+		{
+			"item": "4 Bedrooms",
+			"icon": "img/sprite.svg#icon-diamonds"
+		},
+		{
+			"item": "2 Bathrooms",
+			"icon": "img/sprite.svg#icon-diamonds"
+		},
+		{
+			"item": "Full Kitchen",
+			"icon": "img/sprite.svg#icon-diamonds"
+		},
+		{
+			"item": "Home Office",
+			"icon": "img/sprite.svg#icon-diamonds"
+		},
+		{
+			"item": "Mini Theater",
+			"icon": "img/sprite.svg#icon-diamonds"
+		},
+		{
+			"item": "Private Deck",
+			"icon": "img/sprite.svg#icon-diamonds"
 		}
 	]
 }

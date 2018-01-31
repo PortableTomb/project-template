@@ -17,7 +17,10 @@
     &__text {
         margin-bottom: .5rem;
         position: relative;
-        z-index: 2;
+        font-family: 'Roboto Slab', serif;
+        letter-spacing: 1px;
+        font-weight: 300;
+        font-style: italic;
     }
 
     &__user {

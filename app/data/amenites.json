@@ -1,0 +1,25 @@
+{
+  "paragraph2":[{
+  "head": "amenities",
+  "blurb": "Gluten-free distillery messenger bag affogato bitters pop-up try-hard gentrify ethical, blog chicharrones lyft organic. Gochujang lyft pinterest tbh chia iPhone lumbersexual. Iceland leggings kinfolk."
+}],
+"amenities": [{
+  "item": "cleaning service",
+  "icon": "img/sprite.svg#icon-home2"
+}, {
+  "item": "24hr concierge",
+  "icon": "img/sprite.svg#icon-bell"
+}, {
+  "item": "24hr meal service",
+  "icon": "img/sprite.svg#icon-spoon-knife"
+},  {
+  "item": "gym membership",
+  "icon": "img/sprite.svg#icon-trophy"
+}, {
+  "item": "free coffee & tea",
+  "icon": "img/sprite.svg#icon-mug"
+}, {
+  "item": "wi-fi & cable",
+  "icon": "img/sprite.svg#icon-connection"
+}]
+}

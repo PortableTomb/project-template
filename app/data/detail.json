@@ -1,28 +1,7 @@
 {
-  "paragraph":[{
+  "paragraph1":[{
     "head": "About Traveller's Sanctuary",
-    "blurb": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate."
-  }, {
-    "head": "Ammenities",
-    "blurb": "Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam."
-  }],
-  "list": [{
-    "item": "cleaning service",
-    "icon": "img/sprite.svg#icon-home2"
-  }, {
-    "item": "24hr concierge",
-    "icon": "img/sprite.svg#icon-bell"
-  }, {
-    "item": "24hr meal service",
-    "icon": "img/sprite.svg#icon-spoon-knife"
-  },  {
-    "item": "gym membership",
-    "icon": "img/sprite.svg#icon-bookmark"
-  }, {
-    "item": "free coffee & tea",
-    "icon": "img/sprite.svg#icon-mug"
-  }, {
-    "item": "free breakfast",
-    "icon": "img/sprite.svg#icon-spoon-knife"
+    "blurb1": "Taxidermy DIY kogi vaporware, microdosing quinoa pabst seitan franzen chicharrones raw denim. Pinterest humblebrag small batch, you probably haven't heard of them disrupt bespoke green juice hashtag selfies shaman.",
+    "blurb2": "Beard truffaut 8-bit taiyaki pitchfork trust fund unicorn. Pabst artisan keffiyeh direct trade mumblecore. Palo santo vexillologist lyft heirloom kale chips."
   }]
 }
