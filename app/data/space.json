@@ -5,21 +5,27 @@
   }],
   "features": [{
   "item": "4 Bedrooms",
-  "icon": "img/sprite.svg#icon-diamonds"
+  "details":"1 lg Master Suite",
+  "icon": "img/sprite.svg#icon-checkmark"
   }, {
   "item": "2 Bathrooms",
-  "icon": "img/sprite.svg#icon-diamonds"
+  "details":"2 Showers, 1 Bath",
+  "icon": "img/sprite.svg#icon-checkmark"
   }, {
   "item": "Full Kitchen",
-  "icon": "img/sprite.svg#icon-diamonds"
+  "details":"Cookware & Pantry",
+  "icon": "img/sprite.svg#icon-checkmark"
   }, {
   "item": "Home Office",
-  "icon": "img/sprite.svg#icon-diamonds"
+  "details":"Desk & Printer/Fax",
+  "icon": "img/sprite.svg#icon-checkmark"
   }, {
   "item": "Mini Theater",
-  "icon": "img/sprite.svg#icon-diamonds"
+  "details":"Widescreen Dolby",
+  "icon": "img/sprite.svg#icon-checkmark"
   }, {
   "item": "Private Deck",
-  "icon": "img/sprite.svg#icon-diamonds"
+  "details":"Grill & Hottub",
+  "icon": "img/sprite.svg#icon-checkmark"
   }]
 }

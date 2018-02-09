@@ -33,7 +33,7 @@
 	],
 	"paragraph1": [
 		{
-			"head": "About Traveller's Sanctuary",
+			"head": "About us",
 			"blurb1": "Taxidermy DIY kogi vaporware, microdosing quinoa pabst seitan franzen chicharrones raw denim. Pinterest humblebrag small batch, you probably haven't heard of them disrupt bespoke green juice hashtag selfies shaman.",
 			"blurb2": "Beard truffaut 8-bit taiyaki pitchfork trust fund unicorn. Pabst artisan keffiyeh direct trade mumblecore. Palo santo vexillologist lyft heirloom kale chips."
 		}
@@ -50,20 +50,20 @@
 	},
 	"nav": [
 		{
-			"title": "the staff",
+			"title": "hosts",
 			"icon": "img/sprite.svg#icon-key"
 		},
 		{
-			"title": "the space",
-			"icon": "img/sprite.svg#icon-glass"
+			"title": "house",
+			"icon": "img/sprite.svg#icon-home2"
 		},
 		{
-			"title": "book now",
+			"title": "book",
 			"icon": "img/sprite.svg#icon-book"
 		}
 	],
 	"overview": {
-		"heading": "Traveller's Sanctuary",
+		"heading": "The Cross Key",
 		"location": "San Francisco, California USA",
 		"icon": "img/sprite.svg#icon-location2",
 		"fullstar": "img/sprite.svg#icon-star-full",
@@ -82,7 +82,7 @@
 		],
 		"count": "Recommended by 99"
 	},
-	"heading": "what guests are saying... ",
+	"title": "what guests are saying... ",
 	"reviews": [
 		{
 			"quote": "The Sanctuary staff saw to our every need while we were in town. The whole team had an amazing stay. Could not recommend it more.",
@@ -118,27 +118,33 @@
 	"features": [
 		{
 			"item": "4 Bedrooms",
-			"icon": "img/sprite.svg#icon-diamonds"
+			"details": "1 lg Master Suite",
+			"icon": "img/sprite.svg#icon-checkmark"
 		},
 		{
 			"item": "2 Bathrooms",
-			"icon": "img/sprite.svg#icon-diamonds"
+			"details": "2 Showers, 1 Bath",
+			"icon": "img/sprite.svg#icon-checkmark"
 		},
 		{
 			"item": "Full Kitchen",
-			"icon": "img/sprite.svg#icon-diamonds"
+			"details": "Cookware & Pantry",
+			"icon": "img/sprite.svg#icon-checkmark"
 		},
 		{
 			"item": "Home Office",
-			"icon": "img/sprite.svg#icon-diamonds"
+			"details": "Desk & Printer/Fax",
+			"icon": "img/sprite.svg#icon-checkmark"
 		},
 		{
 			"item": "Mini Theater",
-			"icon": "img/sprite.svg#icon-diamonds"
+			"details": "Widescreen Dolby",
+			"icon": "img/sprite.svg#icon-checkmark"
 		},
 		{
 			"item": "Private Deck",
-			"icon": "img/sprite.svg#icon-diamonds"
+			"details": "Grill & Hottub",
+			"icon": "img/sprite.svg#icon-checkmark"
 		}
 	]
 }

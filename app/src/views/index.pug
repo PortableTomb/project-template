@@ -8,8 +8,10 @@ html(lang="en")
 
     body
         div(class="container")
-          header(class="header")
-            img(class="brand-logo" src="img/skeleton-key.png" alt="key logo")
+          header(class="header") 
+            svg(class="brand-logo") 
+              use(xlink:href="img/key.svg#Layer_1")
+            div(class="brand-logo__text") The Cross Key
             form(class="search" action="#")
               input(class="search__input" type="text" placeholder="search")
               button(class="search__button")
@@ -17,19 +19,20 @@ html(lang="en")
                   use(xlink:href="img/sprite.svg#icon-magnifying-glass")
             
             div(class="user-nav")
-              div(class="user-nav__icon-box")
-                svg(class="user-nav__icon")
-                  use(xlink:href="img/sprite.svg#icon-bell")
-                span(class="user-nav__notification")
-              div(class="user-nav__icon-box")
-                svg(class="user-nav__icon")
-                  use(xlink:href="img/sprite.svg#icon-bubble")
-                span(class="user-nav__notification")
+              //- div(class="user-nav__icon-box")
+              //-   svg(class="user-nav__icon")
+              //-     use(xlink:href="img/sprite.svg#icon-bell")
+              //-   span(class="user-nav__notification")
+              //- div(class="user-nav__icon-box")
+              //-   svg(class="user-nav__icon")
+              //-     use(xlink:href="img/sprite.svg#icon-bubble")
+              //-   span(class="user-nav__notification")
               div(class="user-nav__user")
                 img(class="user-nav__user--photo" src="img/user-avatar.jpg")
                   
           div(class="content")
             //- div(class="hero")
+            
             nav(class="navbar")
               ul(class="top-nav") 
                               
@@ -41,15 +44,24 @@ html(lang="en")
                         span=i.title
                 
             main(class="content-view")
-              div(class="hero")
+              div(class="hero") 
+                div(class="hero__cta")
+                  h1(class="hero__cta--title") The Cross Key 
+                  h2(class="hero__cta--subtitle") San Francisco, Ca
+                  div(class="hero__brand-logo")
+                    
+                    svg(class="hero__brand-logo--svg")
+                      use(xlink:href="img/key.svg#Layer_1")
+                  
+                  
               
               //- div(class="gallery")
               //-   each image in gallery.images
               //-       figure(class="gallery__item")
               //-           img(src=image alt="gallery photo")
-                          
+                
               div(class="overview")
-                h1(class="overview__heading")=overview.heading
+                h2(class="overview__heading")=overview.heading
                 
                 div(class="overview__location")
                   a(class="btn-inline")=overview.location
@@ -64,34 +76,32 @@ html(lang="en")
                   svg(class="overview__icon-star")
                     use(xlink:href=overview.halfstar)
                       
-                      
                 div(class="gallery")
                   each image in gallery.images
                       figure(class="gallery__item")
                           img(src=image alt="gallery photo")      
-                    
-                //- div(class="overview__rating")
-                //-   div(class="overview__rating-average")=overview.average
-                //-   span(class="overview__rating-count")=overview.count
                           
                 div(class="detail")
-                  
                   div(class="description")
-                    img(src="img/guests-01.jpg" class="detail_image")
+                    each h in paragraph1
+                      h2(class="parahead top")=h.head
+                    img(src="img/bnb-apt.jpg" class="detail_image")
                     each p in paragraph1
-                      h3(class="parahead")=p.head
+                      //- h2(class="parahead top")=p.head
                       p(class="paragraph")=p.blurb1
                       p(class="paragraph")=p.blurb2
                       
                     each s in paragraph3
                       h3(class="parahead")=s.head
                       p(class="paragraph")=s.blurb 
-                              
-                    ul(class="list")
-                      each n in features
-                        li(class="list__item")=n.item
-                          svg(class="list__icon")
-                            use(xlink:href=n.icon)
+                    
+                    div(class="space")          
+                      ul(class="list")
+                        each n in features
+                          li(class="list__item")=n.item
+                            p(class="list__detail")=n.details
+                            svg(class="list__icon")
+                              use(xlink:href=n.icon)
                    
                     each s in paragraph2
                       h3(class="parahead")=s.head
@@ -102,18 +112,12 @@ html(lang="en")
                         li(class="list__item")=i.item
                           svg(class="list__icon")
                             use(xlink:href=i.icon)
-                
-
-              
-                    //- div(class="recommend")
-                    //-   each user in recommend.users
-                    //-     div(class="recommend__users")
-                    //-       img(class="recommend__photo" alt="user avatar" src=user)
-                    //- div(class="recommend__box")
-                    //-     p(class="recommend__counter")=recommend.count
+     
                         
                   div(class="user-reviews")
                     figure(class="review")
+               
+                      h3(class="review__title") guest reviews
                
                       div(class="recommend")
                         each user in recommend.users
@@ -124,8 +128,6 @@ html(lang="en")
                           p(class="recommend__counter")=recommend.count
                       
                       
-                      
-                      h3(class="review__title")=reviews.heading
                       each review in reviews
                         blockquote(class="review__text")=review.quote
                         figcaption(class="review__user")
@@ -137,6 +139,9 @@ html(lang="en")
                             svg(class="review__user-like")
                               use(xlink:href=review.icon)
                             span(class="review__user-date")=review.count
-        
+                            
+                            
+                    
+                      
 
         script(src='js/bundle.js' type="text/javascript")

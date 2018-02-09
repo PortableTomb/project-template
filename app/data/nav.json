@@ -1,12 +1,12 @@
 {
   "nav": [{
-    "title": "the staff",
+    "title": "hosts",
     "icon": "img/sprite.svg#icon-key"
   }, {
-    "title": "the space",
-    "icon": "img/sprite.svg#icon-glass"
+    "title": "house",
+    "icon": "img/sprite.svg#icon-home2"
   }, {
-    "title": "book now",
+    "title": "book",
     "icon": "img/sprite.svg#icon-book"
   }]
 }

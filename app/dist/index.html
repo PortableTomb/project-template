@@ -8,7 +8,11 @@
   </head>
   <body>
     <div class="container">
-      <header class="header"><img class="brand-logo" src="img/skeleton-key.png" alt="key logo">
+      <header class="header"> 
+        <svg class="brand-logo"> 
+          <use xlink:href="img/key.svg#Layer_1"></use>
+        </svg>
+        <div class="brand-logo__text">The Cross Key</div>
         <form class="search" action="#">
           <input class="search__input" type="text" placeholder="search">
           <button class="search__button">
@@ -18,16 +22,6 @@
           </button>
         </form>
         <div class="user-nav">
-          <div class="user-nav__icon-box">
-            <svg class="user-nav__icon">
-              <use xlink:href="img/sprite.svg#icon-bell"></use>
-            </svg><span class="user-nav__notification"></span>
-          </div>
-          <div class="user-nav__icon-box">
-            <svg class="user-nav__icon">
-              <use xlink:href="img/sprite.svg#icon-bubble"></use>
-            </svg><span class="user-nav__notification"></span>
-          </div>
           <div class="user-nav__user"><img class="user-nav__user--photo" src="img/user-avatar.jpg"></div>
         </div>
       </header>
@@ -37,21 +31,31 @@
             <li class="top-nav__item"><a class="top-nav__link">
                 <svg class="top-nav__icon">
                   <use xlink:href="img/sprite.svg#icon-key"></use>
-                </svg><span>the staff</span></a></li>
+                </svg><span>hosts</span></a></li>
             <li class="top-nav__item"><a class="top-nav__link">
                 <svg class="top-nav__icon">
-                  <use xlink:href="img/sprite.svg#icon-glass"></use>
-                </svg><span>the space</span></a></li>
+                  <use xlink:href="img/sprite.svg#icon-home2"></use>
+                </svg><span>house</span></a></li>
             <li class="top-nav__item"><a class="top-nav__link">
                 <svg class="top-nav__icon">
                   <use xlink:href="img/sprite.svg#icon-book"></use>
-                </svg><span>book now</span></a></li>
+                </svg><span>book</span></a></li>
           </ul>
         </nav>
         <main class="content-view">
-          <div class="hero"></div>
+          <div class="hero"> 
+            <div class="hero__cta">
+              <h1 class="hero__cta--title">The Cross Key </h1>
+              <h2 class="hero__cta--subtitle">San Francisco, Ca</h2>
+              <div class="hero__brand-logo">
+                <svg class="hero__brand-logo--svg">
+                  <use xlink:href="img/key.svg#Layer_1"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
           <div class="overview">
-            <h1 class="overview__heading">Traveller's Sanctuary</h1>
+            <h2 class="overview__heading">The Cross Key</h2>
             <div class="overview__location"><a class="btn-inline">San Francisco, California USA</a>
               <svg class="overview__icon-location">
                 <use xlink:href="img/sprite.svg#icon-location2"></use>
@@ -81,44 +85,52 @@
             <figure class="gallery__item"><img src="img/Live_600.jpg" alt="gallery photo"></figure>
           </div>
           <div class="detail">
-            <div class="description"><img class="detail_image" src="img/guests-01.jpg">
-              <h3 class="parahead">About Traveller's Sanctuary</h3>
+            <div class="description">
+              <h2 class="parahead top">About us</h2><img class="detail_image" src="img/bnb-apt.jpg">
               <p class="paragraph">Taxidermy DIY kogi vaporware, microdosing quinoa pabst seitan franzen chicharrones raw denim. Pinterest humblebrag small batch, you probably haven't heard of them disrupt bespoke green juice hashtag selfies shaman.</p>
               <p class="paragraph">Beard truffaut 8-bit taiyaki pitchfork trust fund unicorn. Pabst artisan keffiyeh direct trade mumblecore. Palo santo vexillologist lyft heirloom kale chips.</p>
               <h3 class="parahead">accomodations</h3>
               <p class="paragraph">Tacos church-key intelligentsia bushwick blue bottle poke flexitarian. Vegan hella umami prism iceland jianbing. Yr vinyl before shabby chic schlitz brunch mlkshk cold-pressed plaid fashion axe adaptogen cray succulents 3 wolf moon cliche disrupt. Microdosing slow-carb tilde offal chillwave..</p>
-              <ul class="list">
-                <li class="list__item">4 Bedrooms
-                  <svg class="list__icon">
-                    <use xlink:href="img/sprite.svg#icon-diamonds"></use>
-                  </svg>
-                </li>
-                <li class="list__item">2 Bathrooms
-                  <svg class="list__icon">
-                    <use xlink:href="img/sprite.svg#icon-diamonds"></use>
-                  </svg>
-                </li>
-                <li class="list__item">Full Kitchen
-                  <svg class="list__icon">
-                    <use xlink:href="img/sprite.svg#icon-diamonds"></use>
-                  </svg>
-                </li>
-                <li class="list__item">Home Office
-                  <svg class="list__icon">
-                    <use xlink:href="img/sprite.svg#icon-diamonds"></use>
-                  </svg>
-                </li>
-                <li class="list__item">Mini Theater
-                  <svg class="list__icon">
-                    <use xlink:href="img/sprite.svg#icon-diamonds"></use>
-                  </svg>
-                </li>
-                <li class="list__item">Private Deck
-                  <svg class="list__icon">
-                    <use xlink:href="img/sprite.svg#icon-diamonds"></use>
-                  </svg>
-                </li>
-              </ul>
+              <div class="space">         
+                <ul class="list">
+                  <li class="list__item">4 Bedrooms
+                    <p class="list__detail">1 lg Master Suite</p>
+                    <svg class="list__icon">
+                      <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                    </svg>
+                  </li>
+                  <li class="list__item">2 Bathrooms
+                    <p class="list__detail">2 Showers, 1 Bath</p>
+                    <svg class="list__icon">
+                      <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                    </svg>
+                  </li>
+                  <li class="list__item">Full Kitchen
+                    <p class="list__detail">Cookware &amp; Pantry</p>
+                    <svg class="list__icon">
+                      <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                    </svg>
+                  </li>
+                  <li class="list__item">Home Office
+                    <p class="list__detail">Desk &amp; Printer/Fax</p>
+                    <svg class="list__icon">
+                      <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                    </svg>
+                  </li>
+                  <li class="list__item">Mini Theater
+                    <p class="list__detail">Widescreen Dolby</p>
+                    <svg class="list__icon">
+                      <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                    </svg>
+                  </li>
+                  <li class="list__item">Private Deck
+                    <p class="list__detail">Grill &amp; Hottub</p>
+                    <svg class="list__icon">
+                      <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
               <h3 class="parahead">amenities</h3>
               <p class="paragraph">Gluten-free distillery messenger bag affogato bitters pop-up try-hard gentrify ethical, blog chicharrones lyft organic. Gochujang lyft pinterest tbh chia iPhone lumbersexual. Iceland leggings kinfolk.</p>
               <ul class="list">
@@ -156,6 +168,7 @@
             </div>
             <div class="user-reviews">
               <figure class="review">
+                <h3 class="review__title">guest reviews</h3>
                 <div class="recommend">
                   <div class="recommend__users"><img class="recommend__photo" alt="user avatar" src="img/user-photo-01.jpg"></div>
                   <div class="recommend__users"><img class="recommend__photo" alt="user avatar" src="img/user-photo-02.jpg"></div>
@@ -167,7 +180,6 @@
                 <div class="recommend__box">
                   <p class="recommend__counter">Recommended by 99</p>
                 </div>
-                <h3 class="review__title"></h3>
                 <blockquote class="review__text">The Sanctuary staff saw to our every need while we were in town. The whole team had an amazing stay. Could not recommend it more.</blockquote>
                 <figcaption class="review__user"><img class="img review__photo" alt="user photo" src="img/user-photo-03.jpg">
                   <div class="review__user-box">
