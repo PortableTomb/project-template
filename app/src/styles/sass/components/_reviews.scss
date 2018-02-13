@@ -3,12 +3,15 @@
     background-color: #fff;
     // box-shadow: $boxshadow;
     @include shadow();
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
     padding: 3.5rem;
 
     display: flex;
     flex-direction: column;
 
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
     // @media only screen and (max-width: $bp-medium) {
     //     margin-bottom: 2.5rem;
     //     padding: 2.5rem;

@@ -8,66 +8,62 @@ html(lang="en")
 
     body
         div(class="container")
-          header(class="header") 
+          header(class="header")
+            
+            //- logo 
             svg(class="brand-logo") 
               use(xlink:href="img/key.svg#Layer_1")
-            div(class="brand-logo__text") The Cross Key
+            div(class="brand-logo__text") Crossed Key
+            
+            //- searchbar
             form(class="search" action="#")
               input(class="search__input" type="text" placeholder="search")
               button(class="search__button")
                 svg(class="search__icon")
                   use(xlink:href="img/sprite.svg#icon-magnifying-glass")
             
+            //- usernav user
             div(class="user-nav")
-              //- div(class="user-nav__icon-box")
-              //-   svg(class="user-nav__icon")
-              //-     use(xlink:href="img/sprite.svg#icon-bell")
-              //-   span(class="user-nav__notification")
-              //- div(class="user-nav__icon-box")
-              //-   svg(class="user-nav__icon")
-              //-     use(xlink:href="img/sprite.svg#icon-bubble")
-              //-   span(class="user-nav__notification")
               div(class="user-nav__user")
                 img(class="user-nav__user--photo" src="img/user-avatar.jpg")
-                  
+          
+          //- content       
           div(class="content")
-            //- div(class="hero")
             
+            //- navbar - topnav
             nav(class="navbar")
-              ul(class="top-nav") 
-                              
+              ul(class="top-nav")                               
                 each i in nav
                     li(class="top-nav__item")
-                      a(class="top-nav__link")
+                      a(class="top-nav__link" href=i.link)
                         svg(class="top-nav__icon")
                           use(xlink:href=i.icon)
                         span=i.title
-                
+            
+            //- content-view
             main(class="content-view")
+              
+              //- hero
               div(class="hero") 
                 div(class="hero__cta")
-                  h1(class="hero__cta--title") The Cross Key 
+                  h1(class="hero__cta--title") Crossed Key 
                   h2(class="hero__cta--subtitle") San Francisco, Ca
                   div(class="hero__brand-logo")
-                    
+                    //- logo
                     svg(class="hero__brand-logo--svg")
                       use(xlink:href="img/key.svg#Layer_1")
-                  
-                  
               
-              //- div(class="gallery")
-              //-   each image in gallery.images
-              //-       figure(class="gallery__item")
-              //-           img(src=image alt="gallery photo")
-                
-              div(class="overview")
+              //- overview  
+              section(class="overview")
                 h2(class="overview__heading")=overview.heading
                 
+                //- location 
                 div(class="overview__location")
                   a(class="btn-inline")=overview.location
                   svg(class="overview__icon-location")
                     use(xlink:href=overview.icon)
-                
+             
+              //- stars    
               - var n = 0;
                 div(class="overview__stars")
                   while n < 4
@@ -75,26 +71,27 @@ html(lang="en")
                       use(xlink:href=overview.fullstar)= n++
                   svg(class="overview__icon-star")
                     use(xlink:href=overview.halfstar)
-                      
+                
+                //- image gallery     
                 div(class="gallery")
                   each image in gallery.images
                       figure(class="gallery__item")
                           img(src=image alt="gallery photo")      
-                          
-                div(class="detail")
+                
+                //- about us / left
+                section(id="aboutUs" class="detail")
                   div(class="description")
                     each h in paragraph1
                       h2(class="parahead top")=h.head
                     img(src="img/bnb-apt.jpg" class="detail_image")
                     each p in paragraph1
-                      //- h2(class="parahead top")=p.head
                       p(class="paragraph")=p.blurb1
                       p(class="paragraph")=p.blurb2
-                      
                     each s in paragraph3
-                      h3(class="parahead")=s.head
+                      h3(id="accomodation" class="parahead")=s.head
                       p(class="paragraph")=s.blurb 
                     
+                    //- accomodations / 
                     div(class="space")          
                       ul(class="list")
                         each n in features
@@ -102,23 +99,37 @@ html(lang="en")
                             p(class="list__detail")=n.details
                             svg(class="list__icon")
                               use(xlink:href=n.icon)
-                   
+  
                     each s in paragraph2
                       h3(class="parahead")=s.head
                       p(class="paragraph")=s.blurb      
-                              
+                    
+                    //- amenities          
                     ul(class="list")
                       each i in amenities
                         li(class="list__item")=i.item
                           svg(class="list__icon")
                             use(xlink:href=i.icon)
      
+                  
+     
+                  //- reviews / right
+                  aside(class="user-reviews")               
+                  
+                    div(class="host") 
+                      div(class="host__profile") 
+                        h3(class="host__title") your host
+                        img(src="img/host.jpg" class="host_image")
                         
-                  div(class="user-reviews")
+                        each item in host  
+                          div(class="host__name")=item.name
+                          div(class="host__bio")=item.bio
+                        
+                  
                     figure(class="review")
-               
                       h3(class="review__title") guest reviews
-               
+                      
+                      //- reviewer avatars
                       div(class="recommend")
                         each user in recommend.users
                           div(class="recommend__users")
@@ -127,7 +138,7 @@ html(lang="en")
                       div(class="recommend__box")
                           p(class="recommend__counter")=recommend.count
                       
-                      
+                      //- individual review
                       each review in reviews
                         blockquote(class="review__text")=review.quote
                         figcaption(class="review__user")
@@ -139,9 +150,60 @@ html(lang="en")
                             svg(class="review__user-like")
                               use(xlink:href=review.icon)
                             span(class="review__user-date")=review.count
-                            
-                            
-                    
+                  
+              //- Book
+              section(id="book" class="book-now")
+                //- h2(class="book-now__title") Reservations
+                div(class="book")
+                  //- h2(class="book-now__title") Reservations
+                  div(class="book__rate") 
+
+                     h2(class="book-now__title") Reservations
+                  h3(class="book__title") Dates
+                  div(class="book__date-box")
+                    div(class="book__date-box--date")
+                      div(class="book__date-box--date-pick")
+                        label(for="from") from
+                        input(type="date" id="from" name="from")
+                      span(class="book__date-box--date-pick")
+                        label(for="to") to
+                        input(type="date" id="to" name="to")
+                      span(class="error" aria-live="polite")
+                        
+                  h3(class="book__title") Guests
+                  div(class="book__info-box")
+                    form(id="f2" class="book__info-box--form" validate)
+                      span(class="book__info-box--label") Adults
+                        select(id="book-adult" class="book__info-box--select" name="book-adult")
+                          each a in adult
+                            option(value=a.value)=a.option
                       
+                      span(class="book__info-box--label") Children
+                        select(id="book-child" class="book__info-box--select" name="book-child")
+                          each c in child
+                            option(value=c.value selected=c.selected)=c.option
+                    
+                      a(id="submit" type="submit" class="book__info-box--btn") Book Now
+                
+                div(class="rules")
+                  div(class="rules__price")
+                    div(class="rules__title") Rental Price
+                    div(class="rules__price") 
+                      ul(class="rules__list")
+                        each p in prices
+                          li
+                            p(class="rules__list--item")=p.item
+                            p(class="rules__list--price")=p.price
+                  
+                  div(class="rules__terms")
+                    div(class="rules__title") Rental Rules
+                      div(class="rules__terms") 
+                        ul(class="rules__list")
+                          each rule in rules
+                            li
+                              p(class="rules__list--rule")=rule.item
+         
+                              
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript")
 
         script(src='js/bundle.js' type="text/javascript")

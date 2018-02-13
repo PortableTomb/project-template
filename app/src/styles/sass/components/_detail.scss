@@ -20,6 +20,11 @@
         // list items
         display: flex;
         align-items: center;
+
+        @media(max-width: $bp-smallest){
+          flex: 0 0 100%;
+        }
+
     }
 
     &__icon {

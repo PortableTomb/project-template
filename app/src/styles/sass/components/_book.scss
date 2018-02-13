@@ -1,0 +1,219 @@
+.book {
+  flex: 1;
+  max-width: 1000px;
+  min-width: 200px;
+  width: 100%;
+  // min-height: 350px;
+  // height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #fff;
+  justify-content: flex-start;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+  align-items: center;
+
+  &__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #087252;
+    margin: 20px 0 -10px 20px;
+    align-self: flex-start;
+    font-weight: 700;
+  }
+// rate
+  &__rate {
+    min-height: 80px;
+    max-height: 33%;
+    height: auto;
+    color: #000;
+    font-size: 3rem;
+    display: flex;
+    padding: 10px;
+    background-color: #0dba86;
+    // background-image: linear-gradient(to right bottom,
+    //                     lightseagreen, darkgreen);
+    box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-weight: 700;
+      letter-spacing: 2px;
+      span {
+        font-weight: 400;
+        font-size: 1rem;
+      }
+    }//p
+  }//rate
+
+// date-boxes
+  &__date-box {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+
+   &--date {
+    width: 100%;
+    hieght: 100%;
+    display: flex;
+    margin: 20px;
+     @media(max-width: 650px) {
+       flex-flow: row wrap;
+     }
+
+      &-pick {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+
+        label {
+          font-size: 14px;
+          border-radius: 0;
+          align-self: center;
+          text-transform: uppercase;
+          font-weight: 600;
+          margin: 0 .5rem;
+        }
+
+        input {
+          flex: 1;
+           &[type="date"]#from {
+              font-size: 14px;
+              font-family: sans-serif;
+              letter-spacing: 1px;
+              text-align: center;
+              border: 0;
+              outline: 0;
+             @media(max-width: $bp-small) {
+               text-align: right;
+             }
+          }
+          &[type="date"]#to {
+              font-size: 14px;
+              font-family: sans-serif;
+              letter-spacing: 1px;
+              text-align: center;
+              border: 0;
+              outline: 0;
+            @media(max-width: $bp-small) {
+               text-align: right;
+             }
+          }
+        }
+      }// -pick
+    } // --date
+  } // date box
+
+  // info-boxes
+  &__info-box {
+    margin: 2rem 2rem;
+    width: 100%;
+    height: 25%;
+    display: flex;
+
+    &--form {
+      width: 100%;
+      margin: 0 20px;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    &--label {
+      min-width: 100%;
+      flex: 1;
+      align-self: center;
+      justify-self: stretch;
+      margin: 6px 6px 6px 0;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+    &--select {
+        &#book-adult,
+        &#book-child {
+          display: block;
+          height: 3.75rem;
+          width: 100%;
+          color: #000;
+          font-size: 1.25rem;
+          font-weight: 400;
+          outline: none;
+          // appearance: none;
+          padding-left: 1rem;
+          background-color: #fff;
+          // background-image: url(img/sprite.svg#icon-diamonds) no-repeat 95% center;
+          margin-top: 1rem;
+          border-radius: .3rem;
+          text-transform: capitalize;
+        }
+
+    }
+
+    &--btn {
+      order: 1;
+      display: flex;
+      margin: 2rem 0;
+      background-color: #0dba86;
+      // background-image: linear-gradient(to right bottom,
+      //                   lightseagreen, darkgreen);
+      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25),
+                  0 8px 8px -7px rgba(0, 0, 0, 1);
+      text-transform: uppercase;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 1.5rem 4.75rem;
+      border-radius: 100px;
+      position: relative;
+      overflow: hidden;
+      transition: all .33s ease-in-out;
+
+      &:hover {
+        color: #fff;
+        background-color: #0ba275;
+        // background-image: linear-gradient(to right bottom,
+        //                   lightseagreen, green);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+      }
+
+    }
+  } // info-box
+} // book
+
+
+// input:invalid {
+//   border: 2px dashed red;
+// }
+//
+// input:valid {
+//   border: 2px solid black;
+// }
+
+.book__info-box--select {
+  select#book-adult, select#book-child {
+    outline: none;
+    appearance: none;
+    height: 3.5rem;
+    width: 100%;
+    padding: 3rem;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    option {
+      background-color: #fff;
+      appearance: none;
+      margin-left: 1rem;
+    }
+  }
+}

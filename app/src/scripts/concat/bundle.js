@@ -1,4 +1,48 @@
-console.log('Logging from Test1');
+console.log('Logging from library.js');
+
+$(document).ready(function(){
+
+
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+});
+
+console.log('Logging from Test1.js');
 
 const a = 1;
 console.log(a);
@@ -77,52 +121,3 @@ removeElementClass	= function( element, className ){
 		}));
 
 	}( document, window, 0 ));
-
-console.log('Logging from Test2');
-console.log('Working!');
-
-window.addEventListener('load', function() {
-
-var form  = document.getElementsByTagName('form')[0];
-var email = document.getElementById('mail');
-var error = document.querySelector('.error');
-var close = document.querySelector('.close');
-
-email.addEventListener("input", function (event) {
-  if (email.validity.valid) {
-    error.innerHTML = "";
-    error.className = "error";
-  }
-}, false);
-
-form.addEventListener("submit", function (event) {
-
-  if (!email.validity.valid) {
-    error.innerHTML = "bad email address, try again.";
-    error.className = "error active";
-    event.preventDefault();
-    }
-    else if( email.value === "" ) {
-    error.innerHTML = "empty form, enter an email.";
-    error.className = "error active";
-    event.preventDefault();
-    }
-    else {
-    confirmSubmit();
-    email.value ="";
-
-    event.preventDefault();
-  }
-
-}, false);
-
-function confirmSubmit() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.add("show");
-    setTimeout(function(){
-    popup.classList.remove("show");
-    }, 3950);
-}
-
-console.log('All assets are loaded')
-})

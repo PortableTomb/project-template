@@ -8,11 +8,11 @@
   </head>
   <body>
     <div class="container">
-      <header class="header"> 
+      <header class="header">
         <svg class="brand-logo"> 
           <use xlink:href="img/key.svg#Layer_1"></use>
         </svg>
-        <div class="brand-logo__text">The Cross Key</div>
+        <div class="brand-logo__text">Crossed Key</div>
         <form class="search" action="#">
           <input class="search__input" type="text" placeholder="search">
           <button class="search__button">
@@ -27,16 +27,16 @@
       </header>
       <div class="content">
         <nav class="navbar">
-          <ul class="top-nav"> 
-            <li class="top-nav__item"><a class="top-nav__link">
+          <ul class="top-nav">                              
+            <li class="top-nav__item"><a class="top-nav__link" href="#aboutUs">
                 <svg class="top-nav__icon">
                   <use xlink:href="img/sprite.svg#icon-key"></use>
                 </svg><span>hosts</span></a></li>
-            <li class="top-nav__item"><a class="top-nav__link">
+            <li class="top-nav__item"><a class="top-nav__link" href="#accomodation">
                 <svg class="top-nav__icon">
                   <use xlink:href="img/sprite.svg#icon-home2"></use>
                 </svg><span>house</span></a></li>
-            <li class="top-nav__item"><a class="top-nav__link">
+            <li class="top-nav__item"><a class="top-nav__link" href="#book">
                 <svg class="top-nav__icon">
                   <use xlink:href="img/sprite.svg#icon-book"></use>
                 </svg><span>book</span></a></li>
@@ -45,7 +45,7 @@
         <main class="content-view">
           <div class="hero"> 
             <div class="hero__cta">
-              <h1 class="hero__cta--title">The Cross Key </h1>
+              <h1 class="hero__cta--title">Crossed Key </h1>
               <h2 class="hero__cta--subtitle">San Francisco, Ca</h2>
               <div class="hero__brand-logo">
                 <svg class="hero__brand-logo--svg">
@@ -54,14 +54,14 @@
               </div>
             </div>
           </div>
-          <div class="overview">
+          <section class="overview">
             <h2 class="overview__heading">The Cross Key</h2>
             <div class="overview__location"><a class="btn-inline">San Francisco, California USA</a>
               <svg class="overview__icon-location">
                 <use xlink:href="img/sprite.svg#icon-location2"></use>
               </svg>
             </div>
-          </div>
+          </section>
           <div class="overview__stars">
             <svg class="overview__icon-star">
               <use xlink:href="img/sprite.svg#icon-star-full">0</use>
@@ -84,12 +84,12 @@
             <figure class="gallery__item"><img src="img/Chairs_600.jpg" alt="gallery photo"></figure>
             <figure class="gallery__item"><img src="img/Live_600.jpg" alt="gallery photo"></figure>
           </div>
-          <div class="detail">
+          <section class="detail" id="aboutUs">
             <div class="description">
-              <h2 class="parahead top">About us</h2><img class="detail_image" src="img/bnb-apt.jpg">
+              <h2 class="parahead top">The Space</h2><img class="detail_image" src="img/bnb-apt.jpg">
               <p class="paragraph">Taxidermy DIY kogi vaporware, microdosing quinoa pabst seitan franzen chicharrones raw denim. Pinterest humblebrag small batch, you probably haven't heard of them disrupt bespoke green juice hashtag selfies shaman.</p>
               <p class="paragraph">Beard truffaut 8-bit taiyaki pitchfork trust fund unicorn. Pabst artisan keffiyeh direct trade mumblecore. Palo santo vexillologist lyft heirloom kale chips.</p>
-              <h3 class="parahead">accomodations</h3>
+              <h3 class="parahead" id="accomodation">accomodations</h3>
               <p class="paragraph">Tacos church-key intelligentsia bushwick blue bottle poke flexitarian. Vegan hella umami prism iceland jianbing. Yr vinyl before shabby chic schlitz brunch mlkshk cold-pressed plaid fashion axe adaptogen cray succulents 3 wolf moon cliche disrupt. Microdosing slow-carb tilde offal chillwave..</p>
               <div class="space">         
                 <ul class="list">
@@ -166,7 +166,14 @@
                 </li>
               </ul>
             </div>
-            <div class="user-reviews">
+            <aside class="user-reviews">              
+              <div class="host"> 
+                <div class="host__profile"> 
+                  <h3 class="host__title">your host</h3><img class="host_image" src="img/host.jpg">
+                  <div class="host__name">Crossed Keys Owner, Oscar Jackson</div>
+                  <div class="host__bio"> 'Kickstarter biodiesel palo santo shoreditch cliche meh. Palo santo polaroid vinyl cronut, ethical la croix chillwave franzen woke copper mug tumeric. VHS deep v franzen chartreuse, lomo church-key seitan hammock mixtape. Venmo hashtag small batch shabby chic. Subway tile hoodie chillwave semiotics pour-over prism lo-fi af butcher tacos sriracha.' </div>
+                </div>
+              </div>
               <figure class="review">
                 <h3 class="review__title">guest reviews</h3>
                 <div class="recommend">
@@ -217,11 +224,100 @@
                   </div>
                 </figcaption>
               </figure>
+            </aside>
+          </section>
+          <section class="book-now" id="book">
+            <div class="book">
+              <div class="book__rate"> 
+                <h2 class="book-now__title">Reservations</h2>
+              </div>
+              <h3 class="book__title">Dates</h3>
+              <div class="book__date-box">
+                <div class="book__date-box--date">
+                  <div class="book__date-box--date-pick">
+                    <label for="from">from</label>
+                    <input type="date" id="from" name="from">
+                  </div><span class="book__date-box--date-pick">
+                    <label for="to">to</label>
+                    <input type="date" id="to" name="to"></span><span class="error" aria-live="polite"></span>
+                </div>
+              </div>
+              <h3 class="book__title">Guests</h3>
+              <div class="book__info-box">
+                <form class="book__info-box--form" id="f2" validate><span class="book__info-box--label">Adults
+                    <select class="book__info-box--select" id="book-adult" name="book-adult">
+                      <option value="1">1 Adult</option>
+                      <option value="2">2 Adults</option>
+                      <option value="3">3 Adults</option>
+                      <option value="4">4 Adults</option>
+                      <option value="5">5 Adults</option>
+                      <option value="6">6 Adults</option>
+                    </select></span><span class="book__info-box--label">Children
+                    <select class="book__info-box--select" id="book-child" name="book-child">
+                      <option value="0" selected="selected">none</option>
+                      <option value="1">Infant</option>
+                      <option value="2">1 Child</option>
+                      <option value="3">2 Children</option>
+                    </select></span><a class="book__info-box--btn" id="submit" type="submit">Book Now</a></form>
+              </div>
             </div>
-          </div>
+            <div class="rules">
+              <div class="rules__price">
+                <div class="rules__title">Rental Price</div>
+                <div class="rules__price"> 
+                  <ul class="rules__list">
+                    <li>
+                      <p class="rules__list--item">base unit price</p>
+                      <p class="rules__list--price">$325 flat rate</p>
+                    </li>
+                    <li>
+                      <p class="rules__list--item">additional adult</p>
+                      <p class="rules__list--price">$50 per adult</p>
+                    </li>
+                    <li>
+                      <p class="rules__list--item">additional child</p>
+                      <p class="rules__list--price">$75 per child</p>
+                    </li>
+                    <li>
+                      <p class="rules__list--item">cleaning fee</p>
+                      <p class="rules__list--price">$65 charge</p>
+                    </li>
+                    <li>
+                      <p class="rules__list--item">unit rental tax</p>
+                      <p class="rules__list--price">9.5% tax charge</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="rules__terms">
+                <div class="rules__title">Rental Rules
+                  <div class="rules__terms"> 
+                    <ul class="rules__list">
+                      <li>
+                        <p class="rules__list--rule">No smoking</p>
+                      </li>
+                      <li>
+                        <p class="rules__list--rule">No parties / events</p>
+                      </li>
+                      <li>
+                        <p class="rules__list--rule">Check-in after 2PM</p>
+                      </li>
+                      <li>
+                        <p class="rules__list--rule">Check-out by 11AM</p>
+                      </li>
+                      <li>
+                        <p class="rules__list--rule">Not pets allowed</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
     </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="js/bundle.js" type="text/javascript"></script>
   </body>
 </html>

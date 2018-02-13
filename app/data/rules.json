@@ -1,0 +1,13 @@
+{
+  "rules": [{
+    "item": "No smoking"
+  }, {
+    "item": "No parties / events"
+  }, {
+    "item": "Check-in after 2PM"
+  },  {
+    "item": "Check-out by 11AM"
+  }, {
+    "item": "Not pets allowed"
+  }]
+}

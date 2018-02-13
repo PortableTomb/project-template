@@ -1,4 +1,4 @@
-console.log('Logging from Test1');
+console.log('Logging from Test1.js');
 
 const a = 1;
 console.log(a);

@@ -31,9 +31,54 @@
 			"icon": "img/sprite.svg#icon-connection"
 		}
 	],
+	"adult": [
+		{
+			"value": 1,
+			"option": "1 Adult"
+		},
+		{
+			"value": 2,
+			"option": "2 Adults"
+		},
+		{
+			"value": 3,
+			"option": "3 Adults"
+		},
+		{
+			"value": 4,
+			"option": "4 Adults"
+		},
+		{
+			"value": 5,
+			"option": "5 Adults"
+		},
+		{
+			"value": 6,
+			"option": "6 Adults"
+		}
+	],
+	"child": [
+		{
+			"value": 0,
+			"option": "none",
+			"selected": "selected"
+		},
+		{
+			"value": 1,
+			"option": "Infant"
+		},
+		{
+			"value": 2,
+			"option": "1 Child"
+		},
+		{
+			"value": 3,
+			"option": "2 Children"
+		}
+	],
 	"paragraph1": [
 		{
-			"head": "About us",
+			"head": "The Space",
 			"blurb1": "Taxidermy DIY kogi vaporware, microdosing quinoa pabst seitan franzen chicharrones raw denim. Pinterest humblebrag small batch, you probably haven't heard of them disrupt bespoke green juice hashtag selfies shaman.",
 			"blurb2": "Beard truffaut 8-bit taiyaki pitchfork trust fund unicorn. Pabst artisan keffiyeh direct trade mumblecore. Palo santo vexillologist lyft heirloom kale chips."
 		}
@@ -48,18 +93,27 @@
 	"head": {
 		"title": "project template"
 	},
+	"host": [
+		{
+			"name": "Crossed Keys Owner, Oscar Jackson",
+			"bio": " 'Kickstarter biodiesel palo santo shoreditch cliche meh. Palo santo polaroid vinyl cronut, ethical la croix chillwave franzen woke copper mug tumeric. VHS deep v franzen chartreuse, lomo church-key seitan hammock mixtape. Venmo hashtag small batch shabby chic. Subway tile hoodie chillwave semiotics pour-over prism lo-fi af butcher tacos sriracha.' "
+		}
+	],
 	"nav": [
 		{
 			"title": "hosts",
-			"icon": "img/sprite.svg#icon-key"
+			"icon": "img/sprite.svg#icon-key",
+			"link": "#aboutUs"
 		},
 		{
 			"title": "house",
-			"icon": "img/sprite.svg#icon-home2"
+			"icon": "img/sprite.svg#icon-home2",
+			"link": "#accomodation"
 		},
 		{
 			"title": "book",
-			"icon": "img/sprite.svg#icon-book"
+			"icon": "img/sprite.svg#icon-book",
+			"link": "#book"
 		}
 	],
 	"overview": {
@@ -71,6 +125,28 @@
 		"average": "8.5 rating",
 		"count": "420 Votes"
 	},
+	"prices": [
+		{
+			"item": "base unit price",
+			"price": "$325 flat rate"
+		},
+		{
+			"item": "additional adult",
+			"price": "$50 per adult"
+		},
+		{
+			"item": "additional child",
+			"price": "$75 per child"
+		},
+		{
+			"item": "cleaning fee",
+			"price": "$65 charge"
+		},
+		{
+			"item": "unit rental tax",
+			"price": "9.5% tax charge"
+		}
+	],
 	"recommend": {
 		"users": [
 			"img/user-photo-01.jpg",
@@ -107,6 +183,23 @@
 			"date": "September 9th, 2017",
 			"icon": "img/sprite.svg#icon-heart",
 			"count": "109 likes"
+		}
+	],
+	"rules": [
+		{
+			"item": "No smoking"
+		},
+		{
+			"item": "No parties / events"
+		},
+		{
+			"item": "Check-in after 2PM"
+		},
+		{
+			"item": "Check-out by 11AM"
+		},
+		{
+			"item": "Not pets allowed"
 		}
 	],
 	"paragraph3": [

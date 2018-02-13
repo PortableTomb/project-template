@@ -1,0 +1,18 @@
+{
+  "prices": [{
+    "item": "base unit price",
+    "price": "$325 flat rate"
+  }, {
+    "item": "additional adult",
+    "price": "$50 per adult"
+  }, {
+    "item": "additional child",
+    "price": "$75 per child"
+  },  {
+    "item": "cleaning fee",
+    "price": "$65 charge"
+  }, {
+    "item": "unit rental tax",
+    "price": "9.5% tax charge"
+  }]
+}

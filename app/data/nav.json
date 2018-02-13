@@ -1,12 +1,15 @@
 {
   "nav": [{
     "title": "hosts",
-    "icon": "img/sprite.svg#icon-key"
+    "icon": "img/sprite.svg#icon-key",
+    "link": "#aboutUs"
   }, {
     "title": "house",
-    "icon": "img/sprite.svg#icon-home2"
+    "icon": "img/sprite.svg#icon-home2",
+    "link": "#accomodation"
   }, {
     "title": "book",
-    "icon": "img/sprite.svg#icon-book"
+    "icon": "img/sprite.svg#icon-book",
+    "link": "#book"
   }]
 }

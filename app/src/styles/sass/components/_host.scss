@@ -1,0 +1,36 @@
+.host {
+  position: relative;
+  background-color: #fff;
+  @include shadow();
+  margin-bottom: 3rem;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2.75rem;
+    margin-bottom: .75rem;
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    align-self: flex-end;
+    margin-bottom: 2rem;
+  }
+
+  &__bio {
+    margin-bottom: .5rem;
+    position: relative;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-style: italic;
+  }
+}

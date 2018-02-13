@@ -71,7 +71,8 @@ svg.hero__brand-logo--svg {
   fill:white;
   stroke: black;
   overflow: visible;
-
+  fill-opacity: .75;
+  
   circle {
     stroke-opacity:0;
   }

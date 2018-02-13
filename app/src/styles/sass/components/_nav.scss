@@ -21,33 +21,33 @@
       }
   }
 
-  &__item::before {
-      content: '';
-      padding: 1rem 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 3px;
-      background-color: rgb(0,55,130);
-      background-color: rgba(0,55,130,0.75);
-      transform: scaleY(0);
-      transition: transform .25s,
-                  width .4s cubic-bezier(1, 1, 0, 1) .25s,
-                  background-color .1s;
-    }
+  // &__item::before {
+  //     content: '';
+  //     padding: 1rem 0;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     height: 100%;
+  //     width: 3px;
+  //     background-color: rgb(0,55,130);
+  //     background-color: rgba(0,55,130,0.75);
+  //     transform: scaleY(0);
+  //     transition: transform .25s,
+  //                 width .4s cubic-bezier(1, 1, 0, 1) .25s,
+  //                 background-color .1s;
+  //   }
 
-    &__item:hover::before,
-    &__item--active::before {
-        transform: scaleY(1);
-        width: 100%;
-    }
-
-    &__item:active::before {
-        color: #fff;
-        background-color: rgb(0,67,187);
-        background-color: rgba(0,67,17,0.75);
-    }
+    // &__item:hover::before,
+    // &__item--active::before {
+    //     transform: scaleY(1);
+    //     width: 100%;
+    // }
+    //
+    // &__item:active::before {
+    //     color: #fff;
+    //     background-color: rgb(0,67,187);
+    //     background-color: rgb(0,67,187);
+    // }
 
   &__link {
     display: flex;
