@@ -64,15 +64,15 @@
 			"selected": "selected"
 		},
 		{
-			"value": 1,
+			"value": 0,
 			"option": "Infant"
 		},
 		{
-			"value": 2,
+			"value": 1,
 			"option": "1 Child"
 		},
 		{
-			"value": 3,
+			"value": 2,
 			"option": "2 Children"
 		}
 	],
@@ -117,8 +117,8 @@
 		}
 	],
 	"overview": {
-		"heading": "The Cross Key",
-		"location": "San Francisco, California USA",
+		"heading": "4.5 Rating",
+		"location": "San Francisco, Ca USA",
 		"icon": "img/sprite.svg#icon-location2",
 		"fullstar": "img/sprite.svg#icon-star-full",
 		"halfstar": "img/sprite.svg#icon-star-half",

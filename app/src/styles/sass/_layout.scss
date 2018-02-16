@@ -41,7 +41,7 @@
   display: flex;
   padding: 4.5rem;
   font-size: 1.4rem;
-  background-color: #fff;
+  background-color: #fafafa;
 
   @media only screen and (max-width: $bp-medium) {
     flex-direction: column;
@@ -108,8 +108,9 @@
   font-size: 1.4rem;
   justify-content: center;
   padding: 4.5rem;
-  background-color: #fff;
+  background-color: $color-main-background;
   box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+  outline: none;
   // margin: 4.5rem;
   // flex-direction: column;
   // line-height: 1;
@@ -129,15 +130,10 @@
   }
 
   &__title {
-    color: #333;
+    color: #efefef;
     font-weight: 300;
     font-size: 2.75rem;
     text-transform: uppercase;
-    margin-bottom: .75rem;
-
-    // @media only screen and (max-width: $bp-medium) {
-    //   color: #000;
-    // }
   }
 }
 

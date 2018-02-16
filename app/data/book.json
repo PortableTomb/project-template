@@ -23,13 +23,13 @@
   "option": "none",
   "selected": "selected"
 }, {
-  "value": 1,
+  "value": 0,
   "option": "Infant"
 }, {
-  "value": 2,
+  "value": 1,
   "option": "1 Child"
 }, {
-  "value": 3,
+  "value": 2,
   "option": "2 Children"
 }]
 }

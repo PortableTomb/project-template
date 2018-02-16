@@ -73,7 +73,7 @@
 
     &__user-like {
         width: 2rem;
-        color: #999;
+        fill: #a3a3a3;
     }
 
     &__rating {
@@ -93,4 +93,8 @@
         left: 1rem;
         z-index: 1;
     }
+}
+
+.liked {
+  fill: #00ddbb;
 }

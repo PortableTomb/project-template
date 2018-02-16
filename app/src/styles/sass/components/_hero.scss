@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  background-image: url("../img/SFNight.jpg");
+  background-image: url("../img/houses-sf.jpg");
   background-size: cover;
   background-position: center;
   max-width: 1500px;
@@ -8,12 +8,19 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+
+  // @media only screen and (min-width: $bp-small) {
+  //   padding-right: 4.5rem;
+  //   justify-content: flex-end;
+  // }
+
 
   &::before {
       content:'';
-      background: #003153; /* fallback for old browsers */
-      background: linear-gradient(#000, #003153, #f7b733 80%);
+      filter: hue-rotate(250deg) saturate(5%);
+      background: none;
+      background: linear-gradient(#000, #7ff 33%);
       position: absolute;
       top: 0;
       right: 0;
@@ -25,7 +32,8 @@
     }
 
   &__cta {
-    margin-top: -25px;
+    // margin-left: 5rem;
+    margin-top: 50px;
     position: absolute;
     display: flex;
     font-family: 'Roboto', sans-serif;
@@ -35,22 +43,24 @@
     color: #fff;
 
     &--title {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+      font-family: 'Roboto', sans-serif;
+      margin: -1.33rem 0;
+      color: #fff;
       font-size: 4.5rem;
       font-weight: 700;
-      letter-spacing: 1px;
-      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.75);
-      font-family: 'Roboto', sans-serif;
-      margin-bottom: -10px;
-      color: #fff;
     }
 
     &--subtitle {
-      font-weight: 400;
+      font-weight: 700;
       text-transform: uppercase;
-      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.75);
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
       font-family: 'Lato', sans-serif;
-      letter-spacing: 2px;
-      font-size: 2rem;
+      color: #fff;
+      letter-spacing: 3px;
+      font-size: 2.5rem;
     }
 
   }
@@ -58,7 +68,7 @@
   &__brand-logo {
     // margin: 25px;
     width: auto;
-    height: 35vh;
+    height: 75px;
     }
 
 }
@@ -68,11 +78,22 @@ svg.hero__brand-logo--svg {
   mix-blend-mode: lighten;
   width: 100%;
   height: 100%;
-  fill:white;
-  stroke: black;
+  fill:#000;
+  stroke: #fff;
   overflow: visible;
-  fill-opacity: .75;
-  
+  // fill-opacity: .75;
+
+
+// text-shadow: 0px 1px 1px rgba(0,0,0,0.75);
+// mix-blend-mode: multiply;
+// width: 100%;
+// height: 100%;
+// fill: #000;
+// stroke: #fff;
+// overflow: visible;
+// opacity: 1;
+// margin-top: -1.5rem;
+
   circle {
     stroke-opacity:0;
   }

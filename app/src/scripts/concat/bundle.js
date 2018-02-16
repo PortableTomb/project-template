@@ -121,3 +121,99 @@ removeElementClass	= function( element, className ){
 		}));
 
 	}( document, window, 0 ));
+
+
+// booking reservation
+const submit = document.getElementById('f2');
+const from = document.getElementById("from");
+const to = document.getElementById("to");
+const adult = document.getElementById("book-adult");
+const child = document.getElementById("book-child");
+
+// amount total dummy data via rand#
+  function getRandAmount() {
+  const min = 325,
+        max = 5000;
+  return (Math.random() * (max - min + 1) + min).toFixed(2);
+  }
+  let randAmount = getRandAmount();
+
+// book now button
+submit.addEventListener("click", function(e) {
+  e.preventDefault();
+  const fromValue = document.getElementById("from").value;
+  const toValue = document.getElementById("to").value;
+  const adultValue = document.getElementById("book-adult").value;
+  const childValue = document.getElementById("book-child").value;
+
+  // handle date input
+  const dateFrom = document.getElementById("bookFromDate");
+  dateFrom.innerHTML = `From ${fromValue}`;
+  const dateTo = document.getElementById("bookToDate");
+  dateTo.innerHTML = `To  ${toValue}`;
+
+  // handle guest input
+  const adultGuest = document.getElementById("bookAdult");
+  const childGuest = document.getElementById("bookChild");
+  adultValue >= "1" ? adultGuest.innerHTML=`${adultValue} Adult Guest`: guests.innerHTML=`${adultValue} Adult Guests`
+  childValue === "0" ? childGuest.innerHTML="" : (childValue === "1" ? childGuest.innerHTML=`${childValue} Child Guest` : childGuest.innerHTML=`${childValue} Child Guests`);
+
+  // handle amount
+  const amount = document.getElementById("book-amount");
+  amount.innerHTML = `$${randAmount}`;
+});
+
+// modal
+var modal = document.querySelector(".confirm-modal");
+var trigger = document.querySelector(".trigger-modal");
+var closeButton = document.querySelector(".confirm-modal__close");
+
+    function toggleModal() {
+      modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+      if (event.target === modal) {
+          toggleModal();
+      }
+    }
+
+  trigger.addEventListener("click", toggleModal);
+  closeButton.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick);
+
+// handle popup
+const confirmPopUp = document.getElementById("confirmPopUp");
+confirmPopUp.addEventListener("click", function(e){
+
+  confirmSubmit();
+  e.preventDefault();
+}, false);
+
+function confirmSubmit() {
+  const popup = document.getElementById("myPopup");
+  popup.classList.add("show");
+  setTimeout(function(){
+  popup.classList.remove("show");
+  toggleModal();
+  }, 3950);
+}
+
+// toggle review likes
+const btnParent = document.querySelector('div.review__user-btn');
+const btns = document.querySelectorAll('.review__user-like');
+const btn = document.querySelector(".review__user-like");
+
+Array.prototype.forEach.call( document.querySelectorAll(".review__user-like"), function (element) {
+element.onclick = toggleLike;
+});
+
+function toggleLike (element) {
+  element = this;
+
+  if(element.classList.contains("liked")){
+    element.classList.remove("liked");
+  } else {
+    element.classList.add("liked");
+  }
+}
