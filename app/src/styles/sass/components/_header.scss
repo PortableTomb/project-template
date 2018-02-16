@@ -3,7 +3,7 @@
   width: 100%;
   height: 7rem;
   font-size: 1.5rem;
-  background-color: #f0f0f0;
+  background-color: $color-background-light;
 
   display: flex;
   justify-content: space-between;
@@ -27,10 +27,9 @@
     margin-bottom: .75rem;
     // mix-blend-mode: multiply;
     overflow: visible;
-    fill: white;
+    fill: $color-font-lightest;
     stroke: black;
     stroke-width: 1px;
-    // mix-blend-mode: multiply;
 
     @media only screen and (max-width: $bp-medium) {
     margin-right: auto;
@@ -40,7 +39,7 @@
     }
 
     &__text {
-      color: #000;
+      color: $color-font-darkest;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 2rem;
@@ -50,9 +49,6 @@
       @media only screen and (max-width: $bp-medium) {
           font-size: 2rem;
       }
-      // @media only screen and (max-width: $bp-smallest) {
-      //     display: flex;
-      // }
     }
   }
 }
@@ -80,7 +76,7 @@
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    background-color: #555;
+    background-color: $color-background-dark;
     border-radius: 100px;
     width: 45%;
     outline: none;
@@ -89,12 +85,11 @@
     padding: .75rem 2rem;
     transition: all .25s ease-in-out;
     margin-right: -3.25rem;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    @include shadow();
 
     @media only screen and (max-width: $bp-medium) {
         width: 60%;
     }
-
     @media only screen and (max-width: $bp-smallest) {
         width: 80%;
     }
@@ -102,8 +97,8 @@
     &:focus {
         outline: none;
         width: 90%;
-        background-color: #777;
-        color: #efefef;
+        background-color: $color-background-medium;
+        color: $color-background-light-alt;
 
         @media only screen and (max-width: $bp-smallest) {
           width: 90%;
@@ -112,12 +107,12 @@
 
     &::-webkit-input-placeholder {
         font-weight: 100;
-        color: #efefef;
+        color: $color-background-light-alt;
     }
 }
 
 &__input:focus + &__button {
-    background-color: #efefef;
+    background-color: $color-background-light-alt;
 }
 
 &__button {
@@ -133,16 +128,16 @@
     &__icon {
       border: none;
       outline: none;
-      background-color: #efefef;
+      background-color: $color-background-light-alt;
       overflow: hidden;
       height: 2rem;
       width: 2rem;
-      fill: #333;
+      fill: $color-background-darker;
 
       &:focus, &:active {
         border: none;
         outline: none;
-        background-color: #efefef;
+        background-color: $color-background-light-alt;
       }
     }
 }
@@ -182,7 +177,7 @@
     &__icon {
         height: 3rem;
         width: 3rem;
-        fill: black;
+        fill: $color-background-darker;
     }
 
     &__notification {
@@ -190,8 +185,7 @@
         height: 1.75rem;
         width: 1.75rem;
         border-radius: 100px;
-        background-color: rgb(0,120,130);
-        // color: #fff;
+        background-color: $color-primary-dark;
         position: absolute;
         top: 1.5rem;
         right: 1rem;

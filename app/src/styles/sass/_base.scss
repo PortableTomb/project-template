@@ -4,11 +4,48 @@ $bp-medium: 56.25em;     // 900px
 $bp-small: 37.5em;     // 600px
 $bp-smallest: 31.25em;     // 500px
 
+$color-font-lightest: #fff;
+$color-font-light: #f1f1f1;
+
+$color-font-darkest: #000;
+$color-font-dark: #333;
+
+$color-primary: #0dba86;
+$color-primary-light: lighten(#0dba86, 10%);
+$color-primary-dark: darken(#0dba86, 10%);
+
 $color-main-background: #f0f0f0;
+$color-background-lightest: #fff;
+$color-background-lighter: #fafafa;
+$color-background-light: #f0f0f0;
+$color-background-lightdark: #f1f1f1;
+$color-background-light-alt: #efefef;
+
+$color-background-darkest: #000;
+$color-background-darker: #333;
+$color-background-dark: #555;
+$color-background-medium: #777;
+
+$color-grey-medium: #7a7a7a;
+$color-grey-light: #dedede;
+
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,300,300i,400,400i,500,700,700i,900|Lato:300,400,700,900');
+
+@mixin shadowlight() {
+  box-shadow: 0px 1.5px 3px rgba(0,0,0,0.25);
+}
 @mixin shadow() {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+@mixin boxshadow() {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+@mixin buttonshadow() {
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25),
+              0 8px 8px -7px rgba(0, 0, 0, 1);
 }
 
 * {

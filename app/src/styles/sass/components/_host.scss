@@ -1,6 +1,6 @@
 .host {
   position: relative;
-  background-color: #fff;
+  background-color: $color-background-lightest;
   @include shadow();
   margin-bottom: 3rem;
   padding: 3.5rem;

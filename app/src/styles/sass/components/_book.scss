@@ -5,9 +5,9 @@
   width: 100%;
   display: flex;
   flex-flow: column wrap;
-  background-color: #fafafa;
+  background-color: $color-background-lighter;
   justify-content: flex-start;
-  box-shadow: 0px 1.5px 3px rgba(0,0,0,0.25);
+  @include shadowlight();
   align-items: center;
 
   @media only screen and (min-width: $bp-medium) {
@@ -18,22 +18,21 @@
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #7a7a7a;
+    color: $color-grey-medium;
     margin: 4rem 0 -1rem 1.5rem;
     align-self: flex-start;
     font-weight: 700;
-    &:not(:last-of-type){
-       // margin-top: 20px 0 -10px 20px;
+    @media only screen and (max-width: $bp-small){
+       margin: 2rem 0 -1rem 1.5rem;
     }
   }
 // rate
   &__rate {
-    color: #000;
     font-size: 3rem;
     display: flex;
     padding: 10px;
-    background-color: #333;
-    box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.25);
+    background-color: $color-background-darker;
+    @include shadowlight();
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -58,7 +57,7 @@
     width: 100%;
     display: flex;
     margin: 20px;
-     @media(max-width: 650px) {
+     @media only screen and (max-width: 650px) {
        flex-flow: row wrap;
      }
 
@@ -66,7 +65,7 @@
         width: 100%;
         height: 40px;
         display: flex;
-        background-color: #fff;
+        background-color: $color-background-lightest;
         justify-content: center;
         align-items: center;
         box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
@@ -89,7 +88,7 @@
               text-align: center;
               border: 0;
               outline: 0;
-             @media(max-width: $bp-small) {
+             @media only screen and (max-width: $bp-small) {
                text-align: right;
              }
           }
@@ -100,7 +99,7 @@
               text-align: center;
               border: 0;
               outline: 0;
-            @media(max-width: $bp-small) {
+            @media only screen and (max-width: $bp-small) {
                text-align: right;
              }
           }
@@ -141,14 +140,12 @@
           display: block;
           height: 3.75rem;
           width: 100%;
-          color: #000;
+          color: $color-font-darkest;
           font-size: 1.25rem;
           font-weight: 400;
           outline: none;
-          // appearance: none;
           padding-left: 1rem;
-          background-color: #fff;
-          // background-image: url(img/sprite.svg#icon-diamonds) no-repeat 95% center;
+          background-color: $color-background-lightest;
           margin-top: 1rem;
           border-radius: .3rem;
           text-transform: capitalize;
@@ -160,13 +157,12 @@
       order: 1;
       display: flex;
       margin: 2rem 0;
-      background-color: #0dba86;
+      background-color: $color-primary;
       background-image: linear-gradient(to right top,
-                        #0dba86, #10eaa8);
-      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25),
-                  0 8px 8px -7px rgba(0, 0, 0, 1);
+                        $color-primary, $color-primary-light);
+      @include buttonshadow();
       text-transform: uppercase;
-      color: white;
+      color: $color-background-lightest;
       font-size: 20px;
       font-weight: 500;
       letter-spacing: 1px;
@@ -177,25 +173,16 @@
       transition: all .33s ease-in-out;
 
       &:hover {
-        color: #fff;
-        background-color: #0ba275;
-        // background-image: linear-gradient(to right bottom,
-        //                   lightseagreen, green);
-        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+        color: $color-font-lightest;
+        background-color: $color-primary;
+        background-image: linear-gradient(to right bottom,
+                           $color-primary-dark, $color-primary);
+        @include boxshadow();
       }
 
     }
   } // info-box
 } // book
-
-
-// input:invalid {
-//   border: 2px dashed red;
-// }
-//
-// input:valid {
-//   border: 2px solid black;
-// }
 
 .book__info-box--select {
   select#book-adult, select#book-child {
@@ -209,7 +196,7 @@
     background: transparent;
     background-image: none;
     option {
-      background-color: #fff;
+      background-color: $color-font-lightest;
       appearance: none;
       margin-left: 1rem;
     }

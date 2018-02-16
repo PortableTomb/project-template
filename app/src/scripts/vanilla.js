@@ -1,8 +1,3 @@
-console.log('Logging from Test1.js');
-
-const a = 1;
-console.log(a);
-
 
 	;( function ( document, window, index ) {
 		'use strict';
@@ -154,6 +149,7 @@ function confirmSubmit() {
   toggleModal();
   }, 3950);
 }
+
 
 // toggle review likes
 const btnParent = document.querySelector('div.review__user-btn');

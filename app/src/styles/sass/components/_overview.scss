@@ -11,7 +11,6 @@
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
-
   }
 
   &__stars {
@@ -30,14 +29,13 @@
     &__icon-location {
         width: 1.75rem;
         height: 1.75rem;
-        fill: currentColor;
+        fill: $color-primary;
     }
 
     &__location {
         font-size: 1.25rem;
         display: flex;
         vertical-align: center;
-
     }
 
     &__icon-location {
@@ -45,24 +43,21 @@
     }
 
     &__rating {
-        background-color: var(--color-primary);
+        background-color: $color-primary;
         margin-left: 3rem;
-        color: #fff;
+        color: $color-font-lightest;
         padding: 0 2.25rem;
         align-self: stretch;
-
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
       }
-
       &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -5px;
       }
-
       &__rating-count {
        font-size: .85rem;
        text-transform: uppercase;
@@ -72,7 +67,7 @@
 //Button Inline
 .btn-inline {
     border: none;
-    color: blue;
+    color: $color-primary;
     font-size: inherit;
     border-bottom: 1px solid currentColor;
     padding-bottom: 2px;
@@ -80,15 +75,13 @@
     background-color: transparent;
     transition: all .25s ease-in-out;
 
-
     // bottom show all span
     & span {
         margin: .33rem;
     }
 
     &:hover {
-        color: red;
-
+        color: $color-primary-dark;
         // bottom show all span
         & span {
             margin-left: .85rem;

@@ -15,17 +15,24 @@
 
     &__content {
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: white;
+      background-color: $color-background-lightdark;
       padding: 2rem;
-      max-width: 50%;
+      width: 33%;
       border-radius: 0.5rem;
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
       justify-content: center;
+
+      @media only screen and (max-width: $bp-medium){
+        width: 50%;
+      }
+      @media only screen and (max-width: $bp-small){
+        width: 90%;
+      }
     }
 
     &__close {
@@ -39,12 +46,12 @@
       height: 2.5rem;
       cursor: pointer;
       border-radius: 50%;
-      background-color: #0dba86;
-      color: white;
+      background-color: $color-primary;
+      color: $color-font-lightest;
       margin-top: -4rem;
 
       &:hover {
-        background-color: darken(#0dba86, 15%);
+        background-color: $color-primary-dark;
       }
     }
 
@@ -53,17 +60,19 @@
       display: flex;
       min-width: 225px;
       align-items: center;
+      justify-content: center;
       flex-direction: column;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-family: 'Roboto', sans-serif;
-      color: #000;
+      color: $color-font-darkest;
       font-weight: 400;
 
       &--request {
         margin-top: 2rem;
       }
       &--name {
+        color: darken(#0dba86, 2.5%);
         letter-spacing: 2px;
         margin-top: -.5rem;
         font-weight: 700;
@@ -98,13 +107,12 @@
       display: flex;
       margin: 2rem 0;
       outline: none;
-      background-color: #0dba86;
+      background-color: $color-primary;
       background-image: linear-gradient(to right top,
-                        #0dba86, #10eaa8);
-      box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25),
-                  0 8px 8px -7px rgba(0, 0, 0, 1);
+                        $color-primary, $color-primary-light);
+      @include buttonshadow();
       text-transform: uppercase;
-      color: white;
+      color: $color-font-lightest;
       font-size: 20px;
       font-weight: 500;
       letter-spacing: 1px;
@@ -114,9 +122,11 @@
       overflow: hidden;
       transition: all .33s ease-in-out;
       &:hover {
-        color: #fff;
-        background-color: #0ba275;
-        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+        color: $color-font-light;
+        background-color: $color-primary-dark;
+        background-image: linear-gradient(to right top,
+                          $color-primary, $color-primary-dark);
+        @include boxshadow();
       }
     }
   }

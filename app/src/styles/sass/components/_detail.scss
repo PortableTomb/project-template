@@ -5,7 +5,6 @@
 
 .list {
     margin: 2.5rem 0;
-    // padding: 1rem 0;
     list-style: none;
 
     // list items
@@ -44,11 +43,6 @@
         // list items
         display: flex;
         flex-direction: column;
-        // align-items: flex-start;
-        @media(max-width: $bp-medium){
-
-        }
-
     }
     &__detail {
       font-weight: 400;
@@ -57,11 +51,10 @@
       margin-bottom: 2rem;
     }
     &__icon {
-      // display: none;
       order: -1;
       margin: .5rem 1rem;
       height: 1.25rem;
-      fill: #00dd00;
+      fill: $color-primary-light;
     }
   }
 }

@@ -1,21 +1,14 @@
 .review {
     position: relative;
-    background-color: #fff;
-    // box-shadow: $boxshadow;
+    background-color: $color-background-lightest;
     @include shadow();
-    // margin-bottom: 3rem;
     padding: 3.5rem;
-
     display: flex;
     flex-direction: column;
 
     &:not(:last-child) {
       margin-bottom: 3rem;
     }
-    // @media only screen and (max-width: $bp-medium) {
-    //     margin-bottom: 2.5rem;
-    //     padding: 2.5rem;
-    // }
 
     &__title {
       align-self: flex-end;
@@ -62,7 +55,7 @@
 
     &__user-date {
         font-size: 1.1rem;
-        color: #333;
+        color: $color-background-darker;
     }
 
     &__user-btn {
@@ -73,11 +66,11 @@
 
     &__user-like {
         width: 2rem;
-        fill: #a3a3a3;
+        fill: $color-grey-light;
     }
 
     &__rating {
-        color: black;
+        color: $color-font-darkest;
         font-size: 2.25rem;
         font-weight: 300;
     }
@@ -91,10 +84,9 @@
         color: rgba(0,0,0,0.1);
         top: -.5rem;
         left: 1rem;
-        z-index: 1;
     }
 }
 
 .liked {
-  fill: #00ddbb;
+  fill: $color-primary-light;
 }

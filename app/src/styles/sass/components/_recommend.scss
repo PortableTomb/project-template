@@ -1,6 +1,6 @@
 .recommend {
     font-size: 1.3rem;
-    color: #000;
+    color: $color-font-darkest;
 
     display: flex;
     align-items: center;
@@ -23,7 +23,7 @@
         width: 4rem;
         border-radius: 50%;
         box-sizing: content-box;
-        border: 3px solid #fff;
+        border: 3px solid $color-font-lightest;
 
         &:not(:last-child){
             margin-right: -2rem;
