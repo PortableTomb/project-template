@@ -3,7 +3,8 @@
   width: 100%;
   height: 7rem;
   font-size: 1.5rem;
-  background-color: $color-background-light;
+  background-color: $color-background-lightest;
+  @include boxshadow();
 
   display: flex;
   justify-content: space-between;
@@ -20,6 +21,7 @@
 
   // LOGO
   .brand-logo {
+    transform: rotate(45deg);
     align-self: center;
     width: 4rem;
     height: 4rem;
@@ -28,7 +30,7 @@
     // mix-blend-mode: multiply;
     overflow: visible;
     fill: $color-font-lightest;
-    stroke: black;
+    stroke: $color-primary-darkest;
     stroke-width: 1px;
 
     @media only screen and (max-width: $bp-medium) {
@@ -39,7 +41,7 @@
     }
 
     &__text {
-      color: $color-font-darkest;
+      color: $color-primary-darkest;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 2rem;
@@ -76,7 +78,7 @@
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    background-color: $color-background-dark;
+    background-color: $color-primary-darkest;
     border-radius: 100px;
     width: 45%;
     outline: none;
@@ -97,7 +99,7 @@
     &:focus {
         outline: none;
         width: 90%;
-        background-color: $color-background-medium;
+        background-color: lighten($color-primary-darkest,15%);
         color: $color-background-light-alt;
 
         @media only screen and (max-width: $bp-smallest) {

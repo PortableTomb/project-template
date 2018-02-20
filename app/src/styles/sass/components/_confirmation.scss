@@ -46,12 +46,13 @@
       height: 2.5rem;
       cursor: pointer;
       border-radius: 50%;
-      background-color: $color-primary;
+      background-color: $color-primary-darkest;
       color: $color-font-lightest;
       margin-top: -4rem;
 
       &:hover {
-        background-color: $color-primary-dark;
+        transition: all 1s ease-in-out;
+        background-color: $color-background-darkest;
       }
     }
 
@@ -72,7 +73,7 @@
         margin-top: 2rem;
       }
       &--name {
-        color: darken(#0dba86, 2.5%);
+        color: $color-primary-darkest;
         letter-spacing: 2px;
         margin-top: -.5rem;
         font-weight: 700;
@@ -107,6 +108,7 @@
       display: flex;
       margin: 2rem 0;
       outline: none;
+      border: none;
       background-color: $color-primary;
       background-image: linear-gradient(to right top,
                         $color-primary, $color-primary-light);
@@ -122,10 +124,11 @@
       overflow: hidden;
       transition: all .33s ease-in-out;
       &:hover {
+        border: none;
         color: $color-font-light;
         background-color: $color-primary-dark;
         background-image: linear-gradient(to right top,
-                          $color-primary, $color-primary-dark);
+                          $color-primary-dark, $color-primary-darkest);
         @include boxshadow();
       }
     }

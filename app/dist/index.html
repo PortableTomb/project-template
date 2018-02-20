@@ -12,7 +12,7 @@
         <svg class="brand-logo"> 
           <use xlink:href="img/key.svg#Layer_1"></use>
         </svg>
-        <div class="brand-logo__text">Crossed Key</div>
+        <div class="brand-logo__text">Twin Keys</div>
         <form class="search" action="#">
           <input class="search__input" type="text" placeholder="search">
           <button class="search__button">
@@ -22,7 +22,7 @@
           </button>
         </form>
         <div class="user-nav">
-          <div class="user-nav__user"><img class="user-nav__user--photo" src="img/user-avatar.jpg"></div>
+          <div class="user-nav__user"><img class="user-nav__user--photo" src="img/user-photo-04.jpg"></div>
         </div>
       </header>
       <div class="content">
@@ -45,9 +45,13 @@
         <main class="content-view">
           <div class="hero"> 
             <div class="hero__cta">
-              <h1 class="hero__cta--title">Crossed Key </h1>
-              <h1 class="hero__cta--subtitle">Guesthouse</h1>
-              <h2 class="hero__cta--localtitle">San Francisco, Ca</h2>
+              <div class="hero__cta--title">twin keys</div>
+              <div class="hero__cta--subtitle">guesthouse</div>
+              <div class="hero__brand-logo">
+                <svg class="hero__brand-logo--svg">
+                  <use xlink:href="img/key.svg#Layer_1"></use>
+                </svg>
+              </div>
             </div>
           </div>
           <section class="overview">
@@ -225,17 +229,17 @@
           <section class="book-now" id="book">
             <form class="book" id="f2" validate>
               <div class="book__rate"> 
-                <h2 class="book-now__title">$375<span class="book-now__title--span">/per night</span></h2>
+                <h2 class="book-now__title">$325<span class="book-now__title--span">/per night</span></h2>
               </div>
               <h3 class="book__title">Dates</h3>
               <div class="book__date-box">
                 <div class="book__date-box--date">
                   <div class="book__date-box--date-pick">
                     <label for="from">from</label>
-                    <input type="date" id="from" name="from" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
+                    <input type="date" id="from" name="from" required>
                   </div><span class="book__date-box--date-pick">
                     <label for="to">to</label>
-                    <input type="date" id="to" name="to" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required></span><span class="error" aria-live="polite"></span>
+                    <input type="date" id="to" name="to" required></span>
                 </div>
               </div>
               <h3 class="book__title">Guests</h3>

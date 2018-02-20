@@ -31,7 +31,9 @@
     font-size: 3rem;
     display: flex;
     padding: 10px;
-    background-color: $color-background-darker;
+    background-color: $color-primary-darkest;
+    background-image: linear-gradient(90deg,
+                      $color-primary, $color-primary-dark, $color-primary-darkest 75%);
     @include shadowlight();
     width: 100%;
     justify-content: center;
@@ -154,7 +156,7 @@
     }
 
     &--btn {
-      order: 1;
+      // order: 1;
       display: flex;
       margin: 2rem 0;
       background-color: $color-primary;
@@ -176,7 +178,7 @@
         color: $color-font-lightest;
         background-color: $color-primary;
         background-image: linear-gradient(to right bottom,
-                           $color-primary-dark, $color-primary);
+                           $color-primary-dark, $color-primary-darkest);
         @include boxshadow();
       }
 

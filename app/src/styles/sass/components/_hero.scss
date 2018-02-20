@@ -12,9 +12,8 @@
 
   &::before {
       content:'';
-      filter: hue-rotate(250deg) saturate(5%);
       background: none;
-      background: linear-gradient($color-background-darkest, #7ff 33%);
+      background: linear-gradient(#1da1f2, #fff 33%);
       position: absolute;
       top: 0;
       right: 0;
@@ -26,46 +25,48 @@
     }
 
   &__cta {
-    margin-top: 50px;
+    margin-top: 100px;
     position: absolute;
     display: flex;
     font-family: 'Roboto', sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: $color-font-light;
+    color: $color-font-lightest;
 
     &--title {
+      line-height: 1;
       letter-spacing: 2px;
       text-transform: uppercase;
-      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-      margin: -1.33rem 0;
-      font-size: 4.5rem;
+      // text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+      font-size: 4rem;
       font-weight: 700;
     }
 
     &--subtitle {
       font-weight: 700;
       text-transform: uppercase;
-      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-      letter-spacing: 3px;
+      // text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+      letter-spacing: 7.5px;
       font-size: 2.5rem;
+      margin-left: .5rem;
     }
   }
 
   &__brand-logo {
     width: auto;
-    height: 75px;
+    height: 100px;
   }
 }
 
 svg.hero__brand-logo--svg {
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75);
+  transform: rotate(45deg);
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.75);
   mix-blend-mode: lighten;
   width: 100%;
   height: 100%;
-  fill: $color-font-darkest;
-  stroke: $color-font-lightest;
+  fill: $color-primary-darkest;
+  stroke: $color-background-lightest;
   overflow: visible;
 
   circle {

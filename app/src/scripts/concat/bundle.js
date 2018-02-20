@@ -42,8 +42,10 @@ $('a[href*="#"]')
 
 });
 
+document.addEventListener("DOMContentLoaded", function(event) {
+    // Your code to run since DOM is loaded and ready
 
-	;( function ( document, window, index ) {
+  ;( function ( document, window, index ) {
 		'use strict';
 
 		var elSelector = '.header',
@@ -213,3 +215,10 @@ function toggleLike (element) {
     element.classList.add("liked");
   }
 }
+
+let today = new Date();
+const setMinDateFrom = document.querySelector("input[type=date]#from");
+const setMinDateTo = document.querySelector("input[type=date]#to");
+setMinDateFrom.min = `${today}`;
+setMinDateTo.min = `${today}`;
+});
