@@ -51,6 +51,7 @@ const gulp = require('gulp'),
      pretty: true,
      basedir: './'
    }))
+   .pipe(concat('index.html'))
    .pipe(gulp.dest('./dist'))
    .pipe( browsersync.stream() );
  });

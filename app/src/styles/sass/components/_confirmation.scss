@@ -14,23 +14,25 @@
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 
     &__content {
-      position: absolute;
-      top: 55%;
-      left: 50%;
+      @include poz-absolute(55%, null, null, 50%);
       transform: translate(-50%, -50%);
       background-color: $color-background-lightdark;
       padding: 2rem;
-      width: 33%;
+      width: 35%;
       border-radius: 0.5rem;
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
       justify-content: center;
 
-      @media only screen and (max-width: $bp-medium){
-        width: 50%;
+      @media only screen and (max-width: $bp-medium) {
+         width: 45%;
+         max-width: 500px;
       }
-      @media only screen and (max-width: $bp-small){
+      @include breakpoint(mobile) {
+        width: 80%;
+      }
+      @include breakpoint(phone) {
         width: 90%;
       }
     }
@@ -78,18 +80,16 @@
         margin-top: -.5rem;
         font-weight: 700;
       }
-      &--date {
-        align-self: flex-start;
+      &--date, &--guest {
+        align-self: center;
         text-transform: capitalize;
-        margin-top: 1rem;
         display: flex;
         flex-direction: column;
       }
+      &--date {
+        margin-top: 1rem;
+      }
       &--guest {
-        align-self: flex-start;
-        text-transform: capitalize;
-        display: flex;
-        flex-direction: column;
         margin-bottom: 1rem;
       }
       &--total {
@@ -105,32 +105,9 @@
       }
     }
     &__btn {
-      display: flex;
-      margin: 2rem 0;
+      @include button
       outline: none;
       border: none;
-      background-color: $color-primary;
-      background-image: linear-gradient(to right top,
-                        $color-primary, $color-primary-light);
-      @include buttonshadow();
-      text-transform: uppercase;
-      color: $color-font-lightest;
-      font-size: 20px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      padding: 1.5rem 4.75rem;
-      border-radius: 100px;
-      position: relative;
-      overflow: hidden;
-      transition: all .33s ease-in-out;
-      &:hover {
-        border: none;
-        color: $color-font-light;
-        background-color: $color-primary-dark;
-        background-image: linear-gradient(to right top,
-                          $color-primary-dark, $color-primary-darkest);
-        @include boxshadow();
-      }
     }
   }
 

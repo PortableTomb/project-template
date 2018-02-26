@@ -137,7 +137,7 @@ const child = document.getElementById("book-child");
 
 // book now button
 submit.addEventListener("click", function(e) {
-  e.preventDefault();
+  // e.preventDefault();
   const fromValue = document.getElementById("from").value;
   const toValue = document.getElementById("to").value;
   const adultValue = document.getElementById("book-adult").value;

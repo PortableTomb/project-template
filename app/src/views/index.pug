@@ -59,13 +59,13 @@ html(lang="en")
               section(class="overview")
                 h2(class="overview__heading")=overview.heading
                 
-                //- location 
+                //- overview location 
                 div(class="overview__location")
                   a(class="btn-inline")=overview.location
                   svg(class="overview__icon-location")
                     use(xlink:href=overview.icon)
              
-              //- stars    
+              //- overview stars    
               - var n = 0;
                 div(class="overview__stars")
                   while n < 4
@@ -195,7 +195,7 @@ html(lang="en")
                           span(class="confirm-modal__close") X
                           div(class="confirm-modal__message") 
                             p(class="confirm-modal__message--request") Request to book 
-                            p(class="confirm-modal__message--name") Crossed Keys 
+                            p(class="confirm-modal__message--name") Twin Keys 
                             p(class="confirm-modal__message--name") Guesthouse 
                             
                             p(class="confirm-modal__message--date")

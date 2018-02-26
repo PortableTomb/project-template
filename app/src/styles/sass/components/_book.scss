@@ -1,4 +1,5 @@
 .book {
+  @include box-shadow(0px, 1.5px, 3px, 0);
   flex: 1;
   max-width: 1000px;
   min-width: 200px;
@@ -7,11 +8,13 @@
   flex-flow: column wrap;
   background-color: $color-background-lighter;
   justify-content: flex-start;
-  @include shadowlight();
   align-items: center;
 
-  @media only screen and (min-width: $bp-medium) {
+  @include breakpoint(tablet) {
     padding: 4.5rem;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    margin-bottom: 4.5rem;
   }
 
   &__title {
@@ -22,19 +25,20 @@
     margin: 4rem 0 -1rem 1.5rem;
     align-self: flex-start;
     font-weight: 700;
-    @media only screen and (max-width: $bp-small){
-       margin: 2rem 0 -1rem 1.5rem;
+
+    @include breakpoint(mobile) {
+      margin: 2rem 0 -1rem 1.5rem;
     }
   }
 // rate
   &__rate {
+    @include box-shadow(0px, 1.5px, 3px, 0);
     font-size: 3rem;
     display: flex;
     padding: 10px;
     background-color: $color-primary-darkest;
     background-image: linear-gradient(90deg,
                       $color-primary, $color-primary-dark, $color-primary-darkest 75%);
-    @include shadowlight();
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -59,9 +63,9 @@
     width: 100%;
     display: flex;
     margin: 20px;
-     @media only screen and (max-width: 650px) {
-       flex-flow: row wrap;
-     }
+    @include breakpoint(mobile) {
+      flex-flow: row wrap;
+    }
 
       &-pick {
         width: 100%;
@@ -70,7 +74,7 @@
         background-color: $color-background-lightest;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+        @include box-shadow(0px, 1px, 1px, 0, 0,0,0,0.5);
 
         label {
           font-size: 14px;
@@ -83,27 +87,11 @@
 
         input {
           flex: 1;
-           &[type="date"]#from {
-              font-size: 14px;
-              font-family: sans-serif;
-              letter-spacing: 1px;
-              text-align: center;
-              border: 0;
-              outline: 0;
-             @media only screen and (max-width: $bp-small) {
-               text-align: right;
-             }
+          &[type="date"]#from {
+            @include date-input();
           }
           &[type="date"]#to {
-              font-size: 14px;
-              font-family: sans-serif;
-              letter-spacing: 1px;
-              text-align: center;
-              border: 0;
-              outline: 0;
-            @media only screen and (max-width: $bp-small) {
-               text-align: right;
-             }
+            @include date-input();
           }
         }
       }// -pick
@@ -152,37 +140,11 @@
           border-radius: .3rem;
           text-transform: capitalize;
         }
-
     }
-
     &--btn {
-      // order: 1;
-      display: flex;
-      margin: 2rem 0;
-      background-color: $color-primary;
-      background-image: linear-gradient(to right top,
-                        $color-primary, $color-primary-light);
-      @include buttonshadow();
-      text-transform: uppercase;
-      color: $color-background-lightest;
-      font-size: 20px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      padding: 1.5rem 4.75rem;
-      border-radius: 100px;
-      position: relative;
-      overflow: hidden;
-      transition: all .33s ease-in-out;
-
-      &:hover {
-        color: $color-font-lightest;
-        background-color: $color-primary;
-        background-image: linear-gradient(to right bottom,
-                           $color-primary-dark, $color-primary-darkest);
-        @include boxshadow();
-      }
-
+      @include button
     }
+
   } // info-box
 } // book
 
