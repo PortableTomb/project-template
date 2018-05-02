@@ -5,7 +5,7 @@ const gulp = require('gulp'),
       fs = require('fs'),
       path = require('path'),
       imagemin = require('gulp-imagemin'),
-      // autoprefixer = require('autoprefixer')
+      deploy = require('gulp-gh-pages'),
       concat = require('gulp-concat'),
       uglify = require('gulp-uglify'),
       postcss = require('gulp-postcss'),
@@ -139,10 +139,14 @@ gulp.task('images', function() {
   .pipe(gulp.dest('dist/img'))
 })
 
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+})
+
 // watch
  gulp.task('watch', function() {
    gulp.watch('./src/views/**/*.pug', gulp.series(['pug:html'])).on('change', browsersync.reload);
-   // gulp.watch('./src/styles/postcss/*.css', gulp.series('styles')).on('change', browsersync.reload);
    gulp.watch('./src/styles/sass/**/*.scss', gulp.series('sass')).on('change', browsersync.reload);
    gulp.watch('./src/scripts/*.js', gulp.series('scripts')).on('change', browsersync.reload);
  });

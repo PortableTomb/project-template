@@ -10,10 +10,12 @@ $color-font-light: #f1f1f1;
 $color-font-darkest: #000;
 $color-font-dark: #333;
 
-$color-primary: #1da1f2;
-$color-primary-light: lighten(#1da1f2, 10%);
-$color-primary-dark: darken(#1da1f2, 5%);
-$color-primary-darkest: #3b5998;
+$color-primary: #0ba2b8;
+$color-primary-light: lighten(#0ba2b8, 10%);
+// $color-primary-light: lighten(#0ba2b8, 10%);
+$color-primary-dark: darken(#0ba2b8, 5%);
+// $color-primary-darkest: #3b5998;
+$color-primary-darkest: #210bb8;
 $color-primary-analogous: #1df2d9;
 $color-primary-lightest: #e6ecf0;
 
@@ -55,7 +57,8 @@ body {
   line-height: 1.6;
   color: #333;
   font-family: 'Roboto', 'Roboto Slab', sans-serif;
-  background-image: linear-gradient(to right bottom, $color-primary-dark, $color-primary-darkest);
+  background-color: #210bb8;
+  background-image: linear-gradient(to right bottom, lighten(#210bb8, 25%) 10%, #210bb8);
   background-size: cover;
   background-repeat: no-repeat;
 }

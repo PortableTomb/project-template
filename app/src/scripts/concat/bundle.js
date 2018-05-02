@@ -43,8 +43,17 @@ $('a[href*="#"]')
 });
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    // Your code to run since DOM is loaded and ready
+    
+// handle input
+var search = document.getElementById('#search');
+var searchbtn = document.getElementById('#searchbtn');
 
+searchbtn.addEventListener('click', function(e) {
+  console.log(search.value);
+  e.preventDefault();
+}, false)
+
+// fix scrolling
   ;( function ( document, window, index ) {
 		'use strict';
 

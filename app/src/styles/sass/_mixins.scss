@@ -46,17 +46,17 @@ text-shadow: $ox $oy $br rgba($r, $g, $b, $a);
 @mixin button {
   // order: 1;
   display: flex;
-  margin: 2rem 0;
+  margin: 2.5rem 0 0 0;
   background-color: $color-primary;
   background-image: linear-gradient(to right bottom,
-                     $color-primary-dark, $color-primary-darkest);
+  $color-primary-analogous, $color-primary-darkest);
   @include buttonshadow();
   text-transform: uppercase;
   color: $color-font-lightest;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
-  padding: 1.5rem 4.75rem;
+  padding: 1.5rem 6rem;
   border-radius: 100px;
   position: relative;
   overflow: hidden;
@@ -66,7 +66,10 @@ text-shadow: $ox $oy $br rgba($r, $g, $b, $a);
     color: $color-font-lightest;
     background-color: $color-primary;
     background-image: linear-gradient(to right bottom,
-                      $color-primary-light, darken($color-primary-dark, 10%));
+    $color-primary-analogous, $color-primary-darkest);
+    // background-image: linear-gradient(to right bottom,
+    //                   lighten($color-primary-darkest, 30%),
+    //                   $color-primary-darkest);
     @include box-shadow(0px, 6px, 12px, 0);
   }
 }

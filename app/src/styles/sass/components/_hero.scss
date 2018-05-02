@@ -3,7 +3,7 @@
   background-image: url("../img/sf-city.jpeg");
   background-size: cover;
   background-position: center;
-  max-width: 1500px;
+  // max-width: 1500px;
   width: auto;
   height: 100vh;
   display: flex;
@@ -14,7 +14,7 @@
       content:'';
       background: none;
       mix-blend-mode: multiply;
-      background: linear-gradient(complement($color-primary), $color-primary 75%);
+      background: linear-gradient(complement($color-primary), $color-primary-darkest 75%);
       @include poz-absolute(0, 0, 0, 0);
       width: auto;
       height: 100vh;

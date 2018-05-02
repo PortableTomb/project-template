@@ -18,7 +18,8 @@
       transform: translate(-50%, -50%);
       background-color: $color-background-lightdark;
       padding: 2rem;
-      width: 35%;
+      max-width: 50em;
+      width: 45%;
       border-radius: 0.5rem;
       display: flex;
       flex-flow: column nowrap;
